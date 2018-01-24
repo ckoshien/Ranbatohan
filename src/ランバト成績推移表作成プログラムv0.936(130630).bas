@@ -5,19 +5,19 @@
 
 #define	ver			"0.936"
 #define	build		"(build20130701)"
-#define	ranbatokun	"<a href=\"http:\/\/www.yurica.net\/dam\/\">‚ç‚ñ‚Î‚ÆŒN v2.12<\/a>(2012/10/19)<br>"
-#define	ranbatohan	"<a href=\"http:\/\/hp.ckoshien.client.jp\/contents\/ranbat.html\">‚ç‚ñ‚Î‚Æ‚Í‚ñ v"+ver+"<\/a><br>"
+#define	ranbatokun	"<a href=\"http:\/\/www.yurica.net\/dam\/\">ã‚‰ã‚“ã°ã¨å› v2.12<\/a>(2012/10/19)<br>"
+#define	ranbatohan	"<a href=\"http:\/\/hp.ckoshien.client.jp\/contents\/ranbat.html\">ã‚‰ã‚“ã°ã¨ã¯ã‚“ v"+ver+"<\/a><br>"
 #define	DAM			"<a href=\"http:\/\/www.clubdam.com\/app\/damStation\/clubdamRanking.do?requestNo="
 #define	DAMk		"<a href=\"http:\/\/www.yurica.net\/dam\/clubdam_ranking.pl?request_no="
 
 
 
 #module
-	;•W€–½—ß‚Ìnoteget‚ÍA–ˆ‰ñƒoƒbƒtƒ@‚Ìæ“ª‚©‚ç‰üs‚ğŒŸõ‚µ‚Ä‚¢‚­‚½‚ßAŒã‚ë‚Ì•û‚Ìs‚ğæ“¾‚·‚é‚Ì‚ÉŠÔ‚ª‚©‚©‚éB
-	;‚»‚±‚ÅA–ˆ‰ñƒoƒbƒtƒ@‚Ìæ“ª‚©‚ç’H‚é‚Ì‚Å‚Í‚È‚­A‘O‰ñæ“¾‚µ‚½s‚©‚ç’H‚Á‚Äs‚­‚±‚Æ‚Å‚‘¬‰»‚·‚éB
+	;æ¨™æº–å‘½ä»¤ã®notegetã¯ã€æ¯å›ãƒãƒƒãƒ•ã‚¡ã®å…ˆé ­ã‹ã‚‰æ”¹è¡Œã‚’æ¤œç´¢ã—ã¦ã„ããŸã‚ã€å¾Œã‚ã®æ–¹ã®è¡Œã‚’å–å¾—ã™ã‚‹ã®ã«æ™‚é–“ãŒã‹ã‹ã‚‹ã€‚
+	;ãã“ã§ã€æ¯å›ãƒãƒƒãƒ•ã‚¡ã®å…ˆé ­ã‹ã‚‰è¾¿ã‚‹ã®ã§ã¯ãªãã€å‰å›å–å¾—ã—ãŸè¡Œã‹ã‚‰è¾¿ã£ã¦è¡Œãã“ã¨ã§é«˜é€ŸåŒ–ã™ã‚‹ã€‚
 	;
-	;‚Ü‚½A•W€ƒ}ƒNƒ‚Ìnotemax‚ÍA–ˆ‰ñƒoƒbƒtƒ@‚Ìæ“ª‚©‚ç‰üs‚ğŒŸõ‚µ‚Äs”‚ğ”‚¦‚Ä‚¢‚éB
-	;‚»‚±‚ÅAnotesel_fast‚ÌÀs‚É1“x‚¾‚¯notemax‚ğÀs‚·‚é‚±‚Æ‚Å‚‘¬‰»‚·‚éB
+	;ã¾ãŸã€æ¨™æº–ãƒã‚¯ãƒ­ã®notemaxã¯ã€æ¯å›ãƒãƒƒãƒ•ã‚¡ã®å…ˆé ­ã‹ã‚‰æ”¹è¡Œã‚’æ¤œç´¢ã—ã¦è¡Œæ•°ã‚’æ•°ãˆã¦ã„ã‚‹ã€‚
+	;ãã“ã§ã€notesel_fastã®å®Ÿè¡Œæ™‚ã«1åº¦ã ã‘notemaxã‚’å®Ÿè¡Œã™ã‚‹ã“ã¨ã§é«˜é€ŸåŒ–ã™ã‚‹ã€‚
 
 	#deffunc notesel_fast var prm
 		notesel prm
@@ -48,24 +48,24 @@
 
 #module
 #const EXPAND_SIZE 1024
-// •¶š—ñ‚Ì‰Šú’l‚ğİ’è‚·‚é
+// æ–‡å­—åˆ—ã®åˆæœŸå€¤ã‚’è¨­å®šã™ã‚‹
 #deffunc set_string str str_to_set
     string_length = strlen(str_to_set)
-    string_size = 64            // ‘ª’è‚Ì‚½‚ß‚ÉŒö•½‰»
+    string_size = 64            // æ¸¬å®šã®ãŸã‚ã«å…¬å¹³åŒ–
     sdim string, string_size
     poke string, 0, str_to_set
     return
 
-// •¶š—ñ‚ğ•Ô‚·
+// æ–‡å­—åˆ—ã‚’è¿”ã™
 #deffunc get_string var target
     target = string
     return
 
-// •¶š—ñ‚Ì’·‚³‚ğ•Ô‚·
+// æ–‡å­—åˆ—ã®é•·ã•ã‚’è¿”ã™
 #defcfunc get_string_length
     return string_length
 
-// •¶š—ñ‚ğ˜AŒ‹‚·‚é
+// æ–‡å­—åˆ—ã‚’é€£çµã™ã‚‹
 #deffunc add_string str str_to_add
     len = strlen(str_to_add)
     if string_size <= string_length + len {
@@ -77,10 +77,10 @@
     return
 #global
 
-;—Dæ“xİ’è
+;å„ªå…ˆåº¦è¨­å®š
 set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 
-;•Ï”’è‹`
+;å¤‰æ•°å®šç¾©
 	ddim border,5
 	rn=""
 	sdim filename,2000,6
@@ -89,8 +89,8 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	sdim borderm,24,5
 	wait_time=0,1,5,10,50,100,250,500
 	max_id=5
-	ser_mode=0;0=Šg’£ID‚È‚µ,1=Šg’£ID‚ ‚è
-;•\¦İ’è
+	ser_mode=0;0=æ‹¡å¼µIDãªã—,1=æ‹¡å¼µIDã‚ã‚Š
+;è¡¨ç¤ºè¨­å®š
 	screen 0,640,480
 	redraw 0
 	color 200,200,255
@@ -98,50 +98,50 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	pos 10,13
 	color 0,0,0
 	font "",12
-	titl="ƒ‰ƒ“ƒoƒg¬ÑŒ•ÊWŒvƒvƒƒOƒ‰ƒ€u‚ç‚ñ‚Î‚Æ‚Í‚ñvv"+ver+build
+	titl="ãƒ©ãƒ³ãƒãƒˆæˆç¸¾æœˆåˆ¥é›†è¨ˆãƒ—ãƒ­ã‚°ãƒ©ãƒ ã€Œã‚‰ã‚“ã°ã¨ã¯ã‚“ã€v"+ver+build
 	title titl
-	mes "‚ç‚ñ‚Î‚Æ‚Í‚ñİ’èƒtƒ@ƒCƒ‹"
+	mes "ã‚‰ã‚“ã°ã¨ã¯ã‚“è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«"
 	pos 150,10
-	input filename(0),300,20,0;ƒIƒuƒWƒFƒNƒgid=0
+	input filename(0),300,20,0;ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=0
 	objsize 24,24
 	pos 460,9
-	button goto "...",*open_ini;ƒIƒuƒWƒFƒNƒgid=1
+	button goto "...",*open_ini;ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=1
 	objsize 90,24
 	pos 490,9
-	button goto "“ü—Íƒf[ƒ^İ’è",*ini_edit;ƒIƒuƒWƒFƒNƒgid=2
+	button goto "å…¥åŠ›ãƒ‡ãƒ¼ã‚¿è¨­å®š",*ini_edit;ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=2
 
 	pos 10,40
-	mes "•¡Œo—Íƒtƒ@ƒCƒ‹"
+	mes "è¤‡æœˆå‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«"
 	pos 150,40
-	input filename(1),300,20,0;ƒIƒuƒWƒFƒNƒgid=3
+	input filename(1),300,20,0;ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=3
 	objsize 24,24
 	pos 460,39
-	button goto "...",*file_save;ƒIƒuƒWƒFƒNƒgid=4
+	button goto "...",*file_save;ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=4
 	objsize 110,24
 	pos 490,39
-	combox ki,20,"HTMLŒ`®(•¡Œ)\nHTMLŒ`®(’PŒ)\nƒeƒLƒXƒgŒ`®\nHTMLŒ`®(•¡¨’P)\n";ƒIƒuƒWƒFƒNƒgid=5
+	combox ki,20,"HTMLå½¢å¼(è¤‡æœˆ)\nHTMLå½¢å¼(å˜æœˆ)\nãƒ†ã‚­ã‚¹ãƒˆå½¢å¼\nHTMLå½¢å¼(è¤‡â†’å˜)\n";ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=5
 
-	pos 10,73 :mes "ŒŸõ‚·‚éƒ‰ƒ“ƒoƒgƒl[ƒ€"
+	pos 10,73 :mes "æ¤œç´¢ã™ã‚‹ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ "
 	objsize 15,15
 	for i,0,5,1
 		pos 35,92+30*i:chkbox "",sr(i);id=6-10
 	next
-	objprm 6,1	;ˆê”Ôã‚Ìƒ`ƒFƒbƒNƒ{ƒbƒNƒX‹­§‚n‚m
-	;ƒ‰ƒ“ƒoƒgƒl[ƒ€“ü—Íƒ{ƒbƒNƒX
+	objprm 6,1	;ä¸€ç•ªä¸Šã®ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹å¼·åˆ¶ï¼¯ï¼®
+	;ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ å…¥åŠ›ãƒœãƒƒã‚¯ã‚¹
 	for i,0,5,1
 		pos 60,90+30*i:input rn(i),100,20;id=11-16
 	next
-	;’nˆæ“ü—Íƒ{ƒbƒNƒX
+	;åœ°åŸŸå…¥åŠ›ãƒœãƒƒã‚¯ã‚¹
 	objsize 80,40
 	for i,0,5,1
 		pos 170,90+30*i:input pre(i),60,20;id=16-20
 	next
-	;«•Ê“ü—Íƒ{ƒbƒNƒX
+	;æ€§åˆ¥å…¥åŠ›ãƒœãƒƒã‚¯ã‚¹
 	for i,0,5,1
 		pos 240,90+30*i:input se(i),60,20;id=21-25
 	next
 
-;è‡’l•\¦
+;é–¾å€¤è¡¨ç¤º
 	color 255,48,48:boxf 320,90,370,110
 	color 255,96,96:boxf 320,110,370,130
 	color 255,128,128:boxf 320,130,370,150
@@ -149,82 +149,82 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	color 255,208,208:boxf 320,170,370,190
 	color 255,255,255:boxf 320,190,370,210
 	for i,0,5,1
-		border(i)=99.000-2*i;‰Šú’l
+		border(i)=99.000-2*i;åˆæœŸå€¤
 	next
 	for i,0,5,1
 		pos 327,99+21*i:input border(i),38,20;id=26-30
 	next
 	objsize 110,24
 	pos 460,120
-	combox sor,20,"Å‚“_‡\nƒŠƒNƒGƒXƒgNo.‡\nƒA[ƒeƒBƒXƒg–¼‡\n•½‹Ï“_‡";ƒIƒuƒWƒFƒNƒgid=31
+	combox sor,20,"æœ€é«˜ç‚¹é †\nãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.é †\nã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåé †\nå¹³å‡ç‚¹é †";ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=31
 	objsize 60,60
 	pos 460,160
-	button goto "ˆ—ŠJn",*start;id=32
+	button goto "å‡¦ç†é–‹å§‹",*start;id=32
 
 	color 0,0,0
-	pos 10,235 :mes "ƒIƒvƒVƒ‡ƒ“"
-	pos 35,255 :mes "Šg’£IDƒtƒ@ƒCƒ‹"
+	pos 10,235 :mes "ã‚ªãƒ—ã‚·ãƒ§ãƒ³"
+	pos 35,255 :mes "æ‹¡å¼µIDãƒ•ã‚¡ã‚¤ãƒ«"
 	pos 120,250 :input filename(5),300,20,0;id=33
-	pos 430,250:objsize 24,24:button goto "...",*load_optionID;ƒIƒuƒWƒFƒNƒgid=34
-	pos 35,280 :objsize 155,15:chkbox "‹È‚²‚Æ‚Ì•½‹Ï“_‚ğo—Í‚µ‚È‚¢",sr(7);id=35
-	pos 35,300 :objsize 155,15:chkbox "–¢ŒŸo‹È‚ğo—Í‚µ‚È‚¢",sr(9);id=36
-	pos 35,325 :mes "o—ÍHTML‚Ì•"
+	pos 430,250:objsize 24,24:button goto "...",*load_optionID;ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=34
+	pos 35,280 :objsize 155,15:chkbox "æ›²ã”ã¨ã®å¹³å‡ç‚¹ã‚’å‡ºåŠ›ã—ãªã„",sr(7);id=35
+	pos 35,300 :objsize 155,15:chkbox "æœªæ¤œå‡ºæ›²ã‚’å‡ºåŠ›ã—ãªã„",sr(9);id=36
+	pos 35,325 :mes "å‡ºåŠ›HTMLã®å¹…"
 	pos 120,320 :objsize 60,24:combox sr(8),20,"1000px\n 900px\n 800px\n 700px\n";id=37
-	pos 200,325 :mes "ƒEƒFƒCƒg"
-	pos 245,320 :objsize 60,24:combox sr(10),20,"‚È‚µ\n  1ms\n  5ms\n 10ms\n 50ms\n100ms\n250ms\n500ms\n";id=38
-	pos 35,350 :mes "•\‚Ìã‚É•\¦‚·‚éƒeƒLƒXƒg"
+	pos 200,325 :mes "ã‚¦ã‚§ã‚¤ãƒˆ"
+	pos 245,320 :objsize 60,24:combox sr(10),20,"ãªã—\n  1ms\n  5ms\n 10ms\n 50ms\n100ms\n250ms\n500ms\n";id=38
+	pos 35,350 :mes "è¡¨ã®ä¸Šã«è¡¨ç¤ºã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆ"
 	pos 35,370 :mesbox filename(3),240,100,5,2000;id=39
-	pos 300,350 :mes "•\‚Ì‰º‚É•\¦‚·‚éƒeƒLƒXƒg"
+	pos 300,350 :mes "è¡¨ã®ä¸‹ã«è¡¨ç¤ºã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆ"
 	pos 300,370 :mesbox filename(4),240,100,5,2000;id=40
-	pos 370,75 :mes "ƒŠƒNƒGƒXƒgNo.‚ÌƒŠƒ“ƒNæ"
-	pos 490,70 :objsize 110,24:combox lin,20,"DAMŒö®ƒTƒCƒg\n‚©‚´‚â‚³‚ñƒTƒCƒg";ƒIƒuƒWƒFƒNƒgid=41
-	pos 320,325 :mes "WŒv‹È”ãŒÀ"
-	pos 400,320 :objsize 60,24:combox sr(11),20,"©“®\n1000‹È\n1500‹È\n2000‹È\n2500‹È\n3000‹È\n";id=42
+	pos 370,75 :mes "ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®ãƒªãƒ³ã‚¯å…ˆ"
+	pos 490,70 :objsize 110,24:combox lin,20,"DAMå…¬å¼ã‚µã‚¤ãƒˆ\nã‹ã–ã‚„ã•ã‚“ã‚µã‚¤ãƒˆ";ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆid=41
+	pos 320,325 :mes "é›†è¨ˆæ›²æ•°ä¸Šé™"
+	pos 400,320 :objsize 60,24:combox sr(11),20,"è‡ªå‹•\n1000æ›²\n1500æ›²\n2000æ›²\n2500æ›²\n3000æ›²\n";id=42
 	pos 530,160:objsize 60,24
-	button goto "’â~",*stop_routine;id=43
+	button goto "åœæ­¢",*stop_routine;id=43
 	redraw 1
 ;======================================================
-;“ü—Íƒf[ƒ^ƒtƒ@ƒCƒ‹İ’èƒEƒCƒ“ƒhƒE(‰Šúó‘Ô:”ñ•\¦)
+;å…¥åŠ›ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¨­å®šã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦(åˆæœŸçŠ¶æ…‹:éè¡¨ç¤º)
 	screen 1,320,120,2
 	color 200,200,255
 	boxf 0,0,640,480
 	pos 10,13
 	color 0,0,0
 	font "",12
-	title "“ü—Íƒf[ƒ^ƒtƒ@ƒCƒ‹İ’èƒEƒCƒU[ƒh"
+	title "å…¥åŠ›ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¨­å®šã‚¦ã‚¤ã‚¶ãƒ¼ãƒ‰"
 	pos 10,40:input year(0),40,20;id=0(1)
-	pos 55,45:mes "”N"
+	pos 55,45:mes "å¹´"
 	pos 70,40:input month(0),20,20;id=1(1)
-	pos 95,45:mes "Œ‚©‚ç"+gettime(0)+"”N"+gettime(1)+"Œ‚Ü‚ÅWŒv‚·‚é"
+	pos 95,45:mes "æœˆã‹ã‚‰"+gettime(0)+"å¹´"+gettime(1)+"æœˆã¾ã§é›†è¨ˆã™ã‚‹"
 	pos 80,90
-	button  goto "İ’èŠJn",*in_init;id=2(1)
+	button  goto "è¨­å®šé–‹å§‹",*in_init;id=2(1)
 	pos 160,90
-	button  goto "•Â‚¶‚é",*init_end;id=3(1)
+	button  goto "é–‰ã˜ã‚‹",*init_end;id=3(1)
 ;===========================================================
-;–¢ŒŸo‹È‚Ì“ü—Í•û–@‘I‘ğƒEƒBƒ“ƒhƒE(‰Šúó‘Ô:”ñ•\¦)
+;æœªæ¤œå‡ºæ›²ã®å…¥åŠ›æ–¹æ³•é¸æŠã‚¦ã‚£ãƒ³ãƒ‰ã‚¦(åˆæœŸçŠ¶æ…‹:éè¡¨ç¤º)
 	screen 2,320,120,2
 	color 200,200,255: boxf 0,0,320,120
 	pos 10,13: color 0,0,0: font "",12
-	title "ƒ‰ƒ“ƒNŠO‹È‚Ì“_”“ü—Í"
-	pos 40,90: button goto "“ü—Í‚µ‚È‚¢",*no_input;id=0(2)
-	pos 120,90: button goto "è“ü—Í",*hand_input;id=1(2)
-	pos 200,90: button goto "ƒtƒ@ƒCƒ‹“ü—Í",*file_input;id=2(2)
-	pos 40,58:objsize 220,15:chkbox "“ü—Í“à—e‚ğŠY“–ƒf[ƒ^ƒtƒ@ƒCƒ‹‚É’Ç‹L‚·‚é",add2dat;id=3(2)
+	title "ãƒ©ãƒ³ã‚¯å¤–æ›²ã®ç‚¹æ•°å…¥åŠ›"
+	pos 40,90: button goto "å…¥åŠ›ã—ãªã„",*no_input;id=0(2)
+	pos 120,90: button goto "æ‰‹å…¥åŠ›",*hand_input;id=1(2)
+	pos 200,90: button goto "ãƒ•ã‚¡ã‚¤ãƒ«å…¥åŠ›",*file_input;id=2(2)
+	pos 40,58:objsize 220,15:chkbox "å…¥åŠ›å†…å®¹ã‚’è©²å½“ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã«è¿½è¨˜ã™ã‚‹",add2dat;id=3(2)
 ;===========================================================
-;è“ü—ÍƒEƒBƒ“ƒhƒE(‰Šúó‘Ô:”ñ•\¦)
+;æ‰‹å…¥åŠ›ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦(åˆæœŸçŠ¶æ…‹:éè¡¨ç¤º)
 	screen 3,320,150,2
 	color 200,200,255: boxf 0,0,320,150
 	pos 10,13: color 0,0,0: font "",12
-	title "–¢ŒŸo‹Èè“ü—ÍƒEƒCƒ“ƒhƒE"
+	title "æœªæ¤œå‡ºæ›²æ‰‹å…¥åŠ›ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦"
 	color 0,0,0
 	con=""
 	pos 10,70:input con,38,20,6;id=0(3)
 	objsize 90,20
-	pos 40,120:button goto "‰Ì‚Á‚Ä‚¢‚È‚¢",*no_sing;id=1(3)
-	pos 160,120:button goto "×İ¸ŠO",*rank_out;id=2(3)
+	pos 40,120:button goto "æ­Œã£ã¦ã„ãªã„",*no_sing;id=1(3)
+	pos 160,120:button goto "ï¾—ï¾ï½¸å¤–",*rank_out;id=2(3)
 ;===========================================================
 	gsel 0,1
-;ƒfƒtƒHƒ‹ƒgİ’èƒ[ƒh
+;ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆè¨­å®šãƒ­ãƒ¼ãƒ‰
 	exist "default.ini"
 	if strsize>0 {
 		filename(0)="default.ini"
@@ -239,14 +239,14 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 *file_save
 	if (ki==0)|(ki==1)|(ki==3):kin="html"
 	if ki==2:kin="txt" 
-	dialog kin,17,"•Û‘¶æ‚Ì‘I‘ğ"
+	dialog kin,17,"ä¿å­˜å…ˆã®é¸æŠ"
 	if stat=1 : filename(1)=refstr
 	if stat!=1 : stop
 	goto *kousin
 ;=============================================================
 *open_ini
 	if (strlen(filename(0))>3)&(max_id==5):gosub *init_save 
-	dialog "ini",16,"İ’èƒtƒ@ƒCƒ‹‚ğŠJ‚­"
+	dialog "ini",16,"è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã"
 	if stat=1 : filename(0)=refstr
 	if stat!=1 : stop
 	exist refstr
@@ -256,7 +256,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	if stat!=1 : stop
 ;============================================================
 *load_optionID
-	dialog "*",16,"Šg’£IDƒtƒ@ƒCƒ‹‚ğŠJ‚­"
+	dialog "*",16,"æ‹¡å¼µIDãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã"
 	if stat=1 : filename(5)=refstr
 	if stat!=1 : stop
 	exist refstr
@@ -290,39 +290,39 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 ;============================================================
 *load_ini
 	max_id2=5
-;İ’èƒtƒ@ƒCƒ‹ƒ`ƒFƒbƒN
-	if notemax<22:dialog "‚±‚ê‚Íİ’èƒtƒ@ƒCƒ‹‚Å‚Í‚ ‚è‚Ü‚¹‚ñB\n(ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ)":stop
+;è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
+	if notemax<22:dialog "ã“ã‚Œã¯è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚\n(ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã›ã‚“)":stop
 	m=(notemax-22)/2+1
 	for i,0,m,1
-		noteget con,21+2*i;”N-Œ
-		if strmid(con,4,1)!="-":dialog "‚±‚ê‚Íİ’èƒtƒ@ƒCƒ‹‚Å‚Í‚ ‚è‚Ü‚¹‚ñB\n("+(22+2*i)+"s‚ªˆÙí‚Å‚·)":stop
+		noteget con,21+2*i;å¹´-æœˆ
+		if strmid(con,4,1)!="-":dialog "ã“ã‚Œã¯è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚\n("+(22+2*i)+"è¡ŒãŒç•°å¸¸ã§ã™)":stop
 	next
-;ŒŸõIDæ“¾(1-5)
+;æ¤œç´¢IDå–å¾—(1-5)
 	for i,1,6,1
 		noteget rn(i-1),i
 	next
-;ŒŸõ“s“¹•{Œ§æ“¾(6-10)
+;æ¤œç´¢éƒ½é“åºœçœŒå–å¾—(6-10)
 	for i,6,11,1
 		noteget pre(i-6),i
 	next
-;ŒŸõ«•Êæ“¾(11-15)
+;æ¤œç´¢æ€§åˆ¥å–å¾—(11-15)
 	for i,11,16,1
 		noteget se(i-11),i
 	next
-;“¾“_”zFè‡’læ“¾(16-20)
+;å¾—ç‚¹é…è‰²é–¾å€¤å–å¾—(16-20)
 	for i,16,21,1
 		noteget borderm(i-16),i
 	next
 	for i,3,8,1
 		border(i-3)=double(borderm(i-3))
 	next
-;“ü—Íƒf[ƒ^ƒtƒ@ƒCƒ‹–¼æ“¾
+;å…¥åŠ›ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«åå–å¾—
 	m=(notemax-22)/2+1
 	sdim datafile,100,m
 	sdim date,10,m
 	for i,0,m,1
-		noteget date(i),21+2*i;”N-Œ‚Ìæ“¾
-		noteget datafile(i),22+2*i;datƒtƒ@ƒCƒ‹–¼‚Ìæ“¾
+		noteget date(i),21+2*i;å¹´-æœˆã®å–å¾—
+		noteget datafile(i),22+2*i;datãƒ•ã‚¡ã‚¤ãƒ«åã®å–å¾—
 	next
 	for i,0,m,1
 		year(i)=int(strmid(date(i),0,4))
@@ -340,9 +340,9 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	mo=(gettime(0)-year(0))*12+gettime(1)-month(0)+1
 	i=0:cha=year(0):chb=month(0)
 	for chc,0,mo,1
-		dialog ""+cha+"”N"+chb+"Œ‚Ì“ü—Íƒf[ƒ^‚Í‚ ‚è‚Ü‚·‚©H",2,"“ü—Íƒf[ƒ^Šm”F"
+		dialog ""+cha+"å¹´"+chb+"æœˆã®å…¥åŠ›ãƒ‡ãƒ¼ã‚¿ã¯ã‚ã‚Šã¾ã™ã‹ï¼Ÿ",2,"å…¥åŠ›ãƒ‡ãƒ¼ã‚¿ç¢ºèª"
 		if stat==6 {
-			dialog "dat;*.htm;*.html",16,""+cha+"”N"+chb+"Œ‚Ì‚ç‚ñ‚Î‚ÆŒNƒf[ƒ^"
+			dialog "dat;*.htm;*.html",16,""+cha+"å¹´"+chb+"æœˆã®ã‚‰ã‚“ã°ã¨å›ãƒ‡ãƒ¼ã‚¿"
 			if stat==1 {
 				datafile(i)=refstr
 				if (cha!=0)&(chb!=0) {
@@ -356,7 +356,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		if chb==13:cha=cha+1:chb=1
 	next
 	m=i
-	pos 160,70:mes "WŒvƒf[ƒ^‚Í"+m+"ŒÂ"
+	pos 160,70:mes "é›†è¨ˆãƒ‡ãƒ¼ã‚¿ã¯"+m+"å€‹"
 	stop
 *init_end
 	gsel 1,-1
@@ -382,41 +382,41 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	stop
 ;==========================================================
 *start
-	if (strlen(filename(1))<=4)&(ki!=1):dialog "o—Íƒtƒ@ƒCƒ‹‚ğİ’è‚µ‚Ä‚­‚¾‚³‚¢",1,"":goto *file_save
+	if (strlen(filename(1))<=4)&(ki!=1):dialog "å‡ºåŠ›ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¨­å®šã—ã¦ãã ã•ã„",1,"":goto *file_save
 	sr(6)=sr(0)+sr(1)+sr(2)+sr(3)+sr(4)
 	time(0)=gettime(0)*365*30*3600*24+gettime(1)*30*3600*24+gettime(3)*3600*24+gettime(4)*3600+gettime(5)*60+gettime(6)
-	if sr(6)==0:dialog "ŒŸõ‚·‚éID‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢",1,"":stop
-	if (ki==1)&(sor==3):dialog "’PŒo—Í‚Å‚Í•½‹Ï“_‡ƒ\[ƒg‚Íg‚¦‚Ü‚¹‚ñ",1,"":stop
+	if sr(6)==0:dialog "æ¤œç´¢ã™ã‚‹IDã‚’é¸æŠã—ã¦ãã ã•ã„",1,"":stop
+	if (ki==1)&(sor==3):dialog "å˜æœˆå‡ºåŠ›ã§ã¯å¹³å‡ç‚¹é †ã‚½ãƒ¼ãƒˆã¯ä½¿ãˆã¾ã›ã‚“",1,"":stop
 	for i,0,43,1
-		objgray i,0;’â~ƒ{ƒ^ƒ“ˆÈŠO‚ğ–³Œø‰»
+		objgray i,0;åœæ­¢ãƒœã‚¿ãƒ³ä»¥å¤–ã‚’ç„¡åŠ¹åŒ–
 	next
 	for chc,0,5,1
-		if sr(chc)==1:ser=chc:_break;’Ç‹L‚Ì–¼‘OŒˆ’è
+		if sr(chc)==1:ser=chc:_break;è¿½è¨˜ã®åå‰æ±ºå®š
 	next
-	title "ƒƒ‚ƒŠŠm•Û’†..."
+	title "ãƒ¡ãƒ¢ãƒªç¢ºä¿ä¸­..."
 	max_id3=500+500*sr(11)
 *start2	
-	;”z—ñŒ`® ”z—ñ–¼(‹ÈID,ƒf[ƒ^ƒtƒ@ƒCƒ‹No.[WŒvŠúŠÔƒ–Œ])	
-	sdim n1,4;ƒŠƒNƒGƒXƒgNo.ã4Œ…
-	sdim n2,2;ƒŠƒNƒGƒXƒgNo.‰º2Œ…
-	sdim son,10;song name(‹È–¼)
-	sdim art,10;artist(ƒA[ƒeƒBƒXƒg–¼)
-	dimtype limit100,vartype("int"),m;‹Œƒo[ƒWƒ‡ƒ“‚Ìƒf[ƒ^ƒtƒ@ƒCƒ‹‚©
+	;é…åˆ—å½¢å¼ é…åˆ—å(æ›²ID,ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«No.[é›†è¨ˆæœŸé–“ãƒ¶æœˆ])	
+	sdim n1,4;ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ä¸Š4æ¡
+	sdim n2,2;ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ä¸‹2æ¡
+	sdim son,10;song name(æ›²å)
+	sdim art,10;artist(ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆå)
+	dimtype limit100,vartype("int"),m;æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‹
 	sdim rbn,50,max_id
 	if sr(11)!=0 {
-		dimtype ar,vartype("int"),max_id3,m;all ranker(‘S‰Ì¥Ò”)
-		dimtype rank,vartype("int"),max_id3,m;rank(‡ˆÊ)
-		ddim poi,max_id3,m;point(“¾“_)
+		dimtype ar,vartype("int"),max_id3,m;all ranker(å…¨æ­Œå”±è€…æ•°)
+		dimtype rank,vartype("int"),max_id3,m;rank(é †ä½)
+		ddim poi,max_id3,m;point(å¾—ç‚¹)
 		sdim top3,20,max_id3,m,6
-		dim no_detect,max_id3;–¢ŒŸo‚ª‚ ‚Á‚½‚©‚Ç‚¤‚©‚Ìƒtƒ‰ƒO
+		dim no_detect,max_id3;æœªæ¤œå‡ºãŒã‚ã£ãŸã‹ã©ã†ã‹ã®ãƒ•ãƒ©ã‚°
 	}
 
-	;Š®‘Sˆê’vŒŸõ‚Ì€”õ
+	;å®Œå…¨ä¸€è‡´æ¤œç´¢ã®æº–å‚™
 	for i,0,max_id,1
 		rbn(i)=rn(i)
 		for k,0,16-strlen(rn(i)),1: rbn(i)=rbn(i)+" ": next
 	next
-	;ƒtƒ@ƒCƒ‹‚ğŠJ‚­
+	;ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã
 		id=0:fl=0
 		time(2)=gettime(0)*365*30*3600*24+gettime(1)*30*3600*24+gettime(3)*3600*24+gettime(4)*3600+gettime(5)*60+gettime(6)
 		for mo,0,m,1
@@ -440,26 +440,26 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		stop
 ;===========================================================================
 *predataload
-	;‹Èî•ñ‚Ìˆ—
+	;æ›²æƒ…å ±ã®å‡¦ç†
 			dim sea,5
-			x=2;sƒJ[ƒ\ƒ‹
+			x=2;è¡Œã‚«ãƒ¼ã‚½ãƒ«
 			do  
 				noteget_fast con,1+x
-				n1(id)=strmid (con,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+				n1(id)=strmid (con,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 				n2(id)=strmid (con,5,2);
-				;‘S‰Ì¥Ò”æ“¾
+				;å…¨æ­Œå”±è€…æ•°å–å¾—
 				noteget_fast con,5+x:ar(id)=int(con)
 
-				x=(x+5)+ar(id)+1;sƒJ[ƒ\ƒ‹ˆÚ“®
+				x=(x+5)+ar(id)+1;è¡Œã‚«ãƒ¼ã‚½ãƒ«ç§»å‹•
 				if id!=0:gosub *precheck
 				if fl=0:id=id+1
-				title "©“®ŒŸo’†:"+(mo+1)+"ƒtƒ@ƒCƒ‹–Ú:"+(x+1)+"/"+notemax_fast+":"+id+"‹ÈŒŸo"
+				title "è‡ªå‹•æ¤œå‡ºä¸­:"+(mo+1)+"ãƒ•ã‚¡ã‚¤ãƒ«ç›®:"+(x+1)+"/"+notemax_fast+":"+id+"æ›²æ¤œå‡º"
 			until x>=notemax_fast-1
-			await wait_time(sr(10));v0.934‚©‚çdo-until‚ÌŠO‚É”z’u
+			await wait_time(sr(10));v0.934ã‹ã‚‰do-untilã®å¤–ã«é…ç½®
 		return
 ;=predataload end=========================================================================
 *dataload
-	;‹Èî•ñ‚Ìˆ—
+	;æ›²æƒ…å ±ã®å‡¦ç†
 			noteget_fast con,0
 			if con=="#DATAFILE ver.1.00#" {
 				limit100(mo)=0
@@ -472,63 +472,63 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			}
 
 			dim sea,5
-			x=2;sƒJ[ƒ\ƒ‹
+			x=2;è¡Œã‚«ãƒ¼ã‚½ãƒ«
 			do  
 				noteget_fast con,1+x
-				n1(id)=strmid (con,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+				n1(id)=strmid (con,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 				n2(id)=strmid (con,5,2);
-				;‹È–¼æ“¾
+				;æ›²åå–å¾—
 				noteget_fast con,2+x:son(id)=con
-				;ƒA[ƒeƒBƒXƒg–¼æ“¾
+				;ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåå–å¾—
 				noteget_fast con,3+x:art(id)=con
-				;‘S‰Ì¥Ò”æ“¾
+				;å…¨æ­Œå”±è€…æ•°å–å¾—
 				noteget_fast con,5+x:ar(id,mo)=int(con)
-				;ãˆÊƒ‰ƒ“ƒJ[‚Ì“¾“_‚ÆIDæ“¾(’PŒo—Í‚Ì‚İ)
+				;ä¸Šä½ãƒ©ãƒ³ã‚«ãƒ¼ã®å¾—ç‚¹ã¨IDå–å¾—(å˜æœˆå‡ºåŠ›ã®ã¿)
 				if (ki==1)||(ki==3) {
 					if ar(id,mo)>=1 {
 						noteget_fast con,6+x
-						top3(id,mo,0)=strmid(con,scr_st,6);1ˆÊ‚Ì“¾“_
-						top3(id,mo,1)=strmid(con,id_st,16);1ˆÊ‚ÌID
+						top3(id,mo,0)=strmid(con,scr_st,6);1ä½ã®å¾—ç‚¹
+						top3(id,mo,1)=strmid(con,id_st,16);1ä½ã®ID
 					}
 					if ar(id,mo)>=2 {
 						noteget_fast con,7+x
-						top3(id,mo,2)=strmid(con,scr_st,6);2ˆÊ‚Ì“¾“_
-						top3(id,mo,3)=strmid(con,id_st,16);2ˆÊ‚ÌID
+						top3(id,mo,2)=strmid(con,scr_st,6);2ä½ã®å¾—ç‚¹
+						top3(id,mo,3)=strmid(con,id_st,16);2ä½ã®ID
 					}
 					if ar(id,mo)>=3 {
 						noteget_fast con,8+x
-						top3(id,mo,4)=strmid(con,scr_st,6);3ˆÊ‚Ì“¾“_
-						top3(id,mo,5)=strmid(con,id_st,16);3ˆÊ‚ÌID
+						top3(id,mo,4)=strmid(con,scr_st,6);3ä½ã®å¾—ç‚¹
+						top3(id,mo,5)=strmid(con,id_st,16);3ä½ã®ID
 					}
 				}
-				;‡ˆÊE“¾“_ŒŸõ
+				;é †ä½ãƒ»å¾—ç‚¹æ¤œç´¢
 				for y,0,ar(id,mo)+1,1
 					noteget_fast con,(x+5)+y
 					for i,0,max_id,1
-						;ƒ‰ƒ“ƒoƒgƒl[ƒ€A“s“¹•{Œ§A«•Ê‚Ì”äŠr‰ñ”‚ğŒ¸‚ç‚µ‚Ä‚‘¬‰»
+						;ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ ã€éƒ½é“åºœçœŒã€æ€§åˆ¥ã®æ¯”è¼ƒå›æ•°ã‚’æ¸›ã‚‰ã—ã¦é«˜é€ŸåŒ–
 						if (strmid(con,id_st,16)==rbn(i)) & (instr(con,0,pre(i))!=-1) & (instr(con,0,se(i))!=-1) {
 							if (ser_mode==1) | (sr(0)==1) | (sr(1)==1) | (sr(2)==1) | (sr(3)==1) | (sr(4)==1) {
 								if poi(id,mo)<double(strmid(con,scr_st,6)) {
-									poi(id,mo)=double(strmid(con,scr_st,6));•¶š—ñ“Ç‚İ‚İ { À”‰»
+									poi(id,mo)=double(strmid(con,scr_st,6));æ–‡å­—åˆ—èª­ã¿è¾¼ã¿ ï¼‹ å®Ÿæ•°åŒ–
 									rank(id,mo)=int(y)
 								}
 							}
 						}
 					next
 				next
-				if rank(id,mo)==0: no_detect(mo)=1;–¢ŒŸo‚¾‚Á‚½‚çƒtƒ‰ƒO‚ğ—§‚Ä‚é
+				if rank(id,mo)==0: no_detect(mo)=1;æœªæ¤œå‡ºã ã£ãŸã‚‰ãƒ•ãƒ©ã‚°ã‚’ç«‹ã¦ã‚‹
 
-				x=(x+5)+ar(id,mo)+1;sƒJ[ƒ\ƒ‹ˆÚ“®
+				x=(x+5)+ar(id,mo)+1;è¡Œã‚«ãƒ¼ã‚½ãƒ«ç§»å‹•
 				if id!=0:gosub *check
 				if fl=0:id=id+1
-				title "Œ»İWŒv’†:"+(mo+1)+"ƒtƒ@ƒCƒ‹–Ú:"+(x+1)+"/"+notemax_fast+":"+id+"‹ÈWŒv"
+				title "ç¾åœ¨é›†è¨ˆä¸­:"+(mo+1)+"ãƒ•ã‚¡ã‚¤ãƒ«ç›®:"+(x+1)+"/"+notemax_fast+":"+id+"æ›²é›†è¨ˆ"
 			until x>=notemax_fast-1
-			await wait_time(sr(10));v0.934‚©‚çdo-until‚ÌŠO‚É”z’u
+			await wait_time(sr(10));v0.934ã‹ã‚‰do-untilã®å¤–ã«é…ç½®
 			return
 ;================================================================================
 *prehtmlload
 	sdim cont,60000
-	bload datafile(mo),cont ;“ü—Íhtmlƒtƒ@ƒCƒ‹ 
+	bload datafile(mo),cont ;å…¥åŠ›htmlãƒ•ã‚¡ã‚¤ãƒ« 
 
 	sdim requestno,7 
 	dim i 
@@ -538,40 +538,40 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	dim fileinfo,24
 	sdim s,256 
 	limit100(mo)=0
-	i = instr(cont,mainpointer,"<style TYPE=\"text\/css\">") ;html‚ÌverŠm”F(CSS‚ª“à‚©ŠO‚©) 
-	if i != -1 : limit100(mo) = 1 ;‚ ‚éê‡‚Í‹Œƒo[ƒWƒ‡ƒ“	
+	i = instr(cont,mainpointer,"<style TYPE=\"text\/css\">") ;htmlã®verç¢ºèª(CSSãŒå†…ã‹å¤–ã‹) 
+	if i != -1 : limit100(mo) = 1 ;ã‚ã‚‹å ´åˆã¯æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³	
 
-	;HTML‰ğÍƒXƒ^[ƒg
+	;HTMLè§£æã‚¹ã‚¿ãƒ¼ãƒˆ
 	mainpointer = 0 
 	repeat 
 		if (limit100(mo)==1) {
-			i = instr(cont,mainpointer,"class=\"score") ;“¾“_ƒf[ƒ^‚Ì‘O‚É•K‚¸‚ ‚é•¶š—ñ‚ğŒŸõ 
-			if i = -1 : break ;–³‚©‚Á‚½‚ç”²‚¯‚é 
-			pointer = mainpointer + i + 48 ;i ‚Ì48•¶šæ‚ªƒf[ƒ^‚Ìæ“ª 
-			len = instr(cont,pointer,"<") ;ƒf[ƒ^‚Í"<"‚Ü‚Å 
-;			poi(id,mo) = double(strmid(cont,pointer,len)) ;“¾“_ƒf[ƒ^æ“¾ 
+			i = instr(cont,mainpointer,"class=\"score") ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿ã®å‰ã«å¿…ãšã‚ã‚‹æ–‡å­—åˆ—ã‚’æ¤œç´¢ 
+			if i = -1 : break ;ç„¡ã‹ã£ãŸã‚‰æŠœã‘ã‚‹ 
+			pointer = mainpointer + i + 48 ;i ã®48æ–‡å­—å…ˆãŒãƒ‡ãƒ¼ã‚¿ã®å…ˆé ­ 
+			len = instr(cont,pointer,"<") ;ãƒ‡ãƒ¼ã‚¿ã¯"<"ã¾ã§ 
+;			poi(id,mo) = double(strmid(cont,pointer,len)) ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿å–å¾— 
 
 			i = instr(cont,mainpointer,"class=\"rank") 
 			pointer = mainpointer + i + 40 
 			len = instr(cont,pointer,"<") 
-;			rank(id,mo) = int(strmid(cont,pointer,len)) ;”’lˆÈŠO‚É‚Í‚O‚ª“ü‚é 
+;			rank(id,mo) = int(strmid(cont,pointer,len)) ;æ•°å€¤ä»¥å¤–ã«ã¯ï¼ãŒå…¥ã‚‹ 
 
 			i = instr(cont,mainpointer,"request_no="); 
 			pointer = mainpointer + i + 11 
 			len = instr(cont,pointer,"\"") 
 			requestno = strmid(cont,pointer,len) 
-			n1(id)=strmid (requestno,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+			n1(id)=strmid (requestno,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 			n2(id)=strmid (requestno,5,2);
 
 
-			i = instr(cont,mainpointer,"<td rowspan=1 class=\"up\">");‹Èƒ^ƒCƒgƒ‹ 
+			i = instr(cont,mainpointer,"<td rowspan=1 class=\"up\">");æ›²ã‚¿ã‚¤ãƒˆãƒ« 
 			pointer = mainpointer + i + 25 
 			len = instr(cont,pointer,"<") 
 ;			son(id) = strmid(cont,pointer,len) 
 
 			i = instr(cont,mainpointer,"class=\"down\">/") 
 			pointer = mainpointer + i 
-			i = instr(cont,pointer,"/")  ;"/"‚Ì3‚ÂŒã‚©‚ç"<"‚Ü‚Å‚ğæ“¾B
+			i = instr(cont,pointer,"/")  ;"/"ã®3ã¤å¾Œã‹ã‚‰"<"ã¾ã§ã‚’å–å¾—ã€‚
 			pointer = pointer + i + 3        ;
 			len = instr(cont,pointer,"<"); 
 ;			s = strmid(cont,pointer,len) 
@@ -580,31 +580,31 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			i = instr(cont,mainpointer,"<td rowspan=1 class=\"down\">") 
 			pointer = mainpointer + i + 27 
 			len = instr(cont,pointer,"<") 
-;			art(id) = strmid(cont,pointer,len);ƒA[ƒeƒBƒXƒg–¼æ“¾
+;			art(id) = strmid(cont,pointer,len);ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåå–å¾—
 
 		}else{
-			;v1.0ˆÈ~‚ÌHTML
+			;v1.0ä»¥é™ã®HTML
 			
-			i = instr(cont,mainpointer,"class=\"MS") ;“¾“_ƒf[ƒ^‚Ì‘O‚É•K‚¸‚ ‚é•¶š—ñ‚ğŒŸõ 
-			if i = -1 : break ;–³‚©‚Á‚½‚ç”²‚¯‚é 
-			pointer = mainpointer + i + 12 ;i ‚Ì12•¶šæ‚ªƒf[ƒ^‚Ìæ“ª 
-			len = instr(cont,pointer,"<") ;ƒf[ƒ^‚Í"<"‚Ü‚Å 
-;			poi(id,mo) = double(strmid(cont,pointer,len)) ;“¾“_ƒf[ƒ^æ“¾ 
+			i = instr(cont,mainpointer,"class=\"MS") ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿ã®å‰ã«å¿…ãšã‚ã‚‹æ–‡å­—åˆ—ã‚’æ¤œç´¢ 
+			if i = -1 : break ;ç„¡ã‹ã£ãŸã‚‰æŠœã‘ã‚‹ 
+			pointer = mainpointer + i + 12 ;i ã®12æ–‡å­—å…ˆãŒãƒ‡ãƒ¼ã‚¿ã®å…ˆé ­ 
+			len = instr(cont,pointer,"<") ;ãƒ‡ãƒ¼ã‚¿ã¯"<"ã¾ã§ 
+;			poi(id,mo) = double(strmid(cont,pointer,len)) ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿å–å¾— 
 
 			i = instr(cont,mainpointer,"class=\"MR") 
 			pointer = mainpointer + i + 12 
 			len = instr(cont,pointer,"<") 
-;			rank(id,mo) = int(strmid(cont,pointer,len)) ;”’lˆÈŠO‚É‚Í‚O‚ª“ü‚é 
+;			rank(id,mo) = int(strmid(cont,pointer,len)) ;æ•°å€¤ä»¥å¤–ã«ã¯ï¼ãŒå…¥ã‚‹ 
 
 			i = instr(cont,mainpointer,"request_no="); 
 			pointer = mainpointer + i + 11 
 			len = instr(cont,pointer,"\"") 
 			requestno = strmid(cont,pointer,len) 
-			n1(id)=strmid (requestno,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+			n1(id)=strmid (requestno,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 			n2(id)=strmid (requestno,5,2);
 
 
-			i = instr(cont,mainpointer,"class=\"sng\"");‹Èƒ^ƒCƒgƒ‹ 
+			i = instr(cont,mainpointer,"class=\"sng\"");æ›²ã‚¿ã‚¤ãƒˆãƒ« 
 			pointer = mainpointer + i + 12 
 			len = instr(cont,pointer,"<") 
 ;			son(id) = strmid(cont,pointer,len) 
@@ -612,29 +612,29 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 
 			i = instr(cont,mainpointer,"class=\"RK") 
 			pointer = mainpointer + i 
-			i = instr(cont,pointer,"/")  ;"/"‚Ì1‚ÂŒã‚©‚ç"<"‚Ü‚Å‚ğæ“¾B
+			i = instr(cont,pointer,"/")  ;"/"ã®1ã¤å¾Œã‹ã‚‰"<"ã¾ã§ã‚’å–å¾—ã€‚
 			pointer = pointer + i + 1        ;
 			len = instr(cont,pointer,"<"); 
 
 			i = instr(cont,mainpointer,"class=\"sgr\"") 
 			pointer = mainpointer + i + 12 
 			len = instr(cont,pointer,"<") 
-;			art(id) = strmid(cont,pointer,len);ƒA[ƒeƒBƒXƒg–¼æ“¾
+;			art(id) = strmid(cont,pointer,len);ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåå–å¾—
 
 		}	
 
 		mainpointer = pointer
-;		if rank(id,mo)==0: no_detect(mo)=1;–¢ŒŸo‚¾‚Á‚½‚çƒtƒ‰ƒO‚ğ—§‚Ä‚é
+;		if rank(id,mo)==0: no_detect(mo)=1;æœªæ¤œå‡ºã ã£ãŸã‚‰ãƒ•ãƒ©ã‚°ã‚’ç«‹ã¦ã‚‹
 		if id!=0:gosub *precheck
 		if fl=0:id=id+1
-		title "©“®ŒŸo’†:"+(mo+1)+"ƒtƒ@ƒCƒ‹–Ú:"+id+"‹ÈŒŸo"
+		title "è‡ªå‹•æ¤œå‡ºä¸­:"+(mo+1)+"ãƒ•ã‚¡ã‚¤ãƒ«ç›®:"+id+"æ›²æ¤œå‡º"
 	loop
 	await wait_time(sr(10))
 	return
 ;=prehtmlload end==============================================================================
 *htmlload
 	sdim cont,60000
-	bload datafile(mo),cont ;“ü—Íhtmlƒtƒ@ƒCƒ‹ 
+	bload datafile(mo),cont ;å…¥åŠ›htmlãƒ•ã‚¡ã‚¤ãƒ« 
 ;	sdim output,60000 
 ;	notesel output 
 
@@ -647,58 +647,58 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	sdim s,256 
 ;	sdim ln,1024 
 	limit100(mo)=0
-	i = instr(cont,mainpointer,"<style TYPE=\"text\/css\">") ;html‚ÌverŠm”F(CSS‚ª“à‚©ŠO‚©) 
-	if i != -1 : limit100(mo) = 1 ;‚ ‚éê‡‚Í‹Œƒo[ƒWƒ‡ƒ“	
+	i = instr(cont,mainpointer,"<style TYPE=\"text\/css\">") ;htmlã®verç¢ºèª(CSSãŒå†…ã‹å¤–ã‹) 
+	if i != -1 : limit100(mo) = 1 ;ã‚ã‚‹å ´åˆã¯æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³	
 
 	set_string ""
-	add_string "#DATAFILE#\n";datƒtƒ@ƒCƒ‹‘‚«o‚µ
-	fxtget fileinfo,datafile(mo);ƒtƒ@ƒCƒ‹‚ÌXVƒ^ƒCƒ€ƒXƒ^ƒ“ƒv‚ğæ“¾
-	add_string "ƒf[ƒ^æ“¾:"+fileinfo(8)+"/"+fileinfo(9)+"/"+fileinfo(11)+"@"+fileinfo(12)+":"+fileinfo(13)+"\n"
+	add_string "#DATAFILE#\n";datãƒ•ã‚¡ã‚¤ãƒ«æ›¸ãå‡ºã—
+	fxtget fileinfo,datafile(mo);ãƒ•ã‚¡ã‚¤ãƒ«ã®æ›´æ–°ã‚¿ã‚¤ãƒ ã‚¹ã‚¿ãƒ³ãƒ—ã‚’å–å¾—
+	add_string "ãƒ‡ãƒ¼ã‚¿å–å¾—æ™‚åˆ»:"+fileinfo(8)+"/"+fileinfo(9)+"/"+fileinfo(11)+"ã€€"+fileinfo(12)+":"+fileinfo(13)+"\n"
 	add_string "================================================\n"
-	;HTML‰ğÍƒXƒ^[ƒg
+	;HTMLè§£æã‚¹ã‚¿ãƒ¼ãƒˆ
 	mainpointer = 0 
 	repeat 
 		if (limit100(mo)==1) {
-			i = instr(cont,mainpointer,"class=\"score") ;“¾“_ƒf[ƒ^‚Ì‘O‚É•K‚¸‚ ‚é•¶š—ñ‚ğŒŸõ 
-			if i = -1 : break ;–³‚©‚Á‚½‚ç”²‚¯‚é 
-			pointer = mainpointer + i + 48 ;i ‚Ì48•¶šæ‚ªƒf[ƒ^‚Ìæ“ª 
-			len = instr(cont,pointer,"<") ;ƒf[ƒ^‚Í"<"‚Ü‚Å 
-			poi(id,mo) = double(strmid(cont,pointer,len)) ;“¾“_ƒf[ƒ^æ“¾ 
+			i = instr(cont,mainpointer,"class=\"score") ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿ã®å‰ã«å¿…ãšã‚ã‚‹æ–‡å­—åˆ—ã‚’æ¤œç´¢ 
+			if i = -1 : break ;ç„¡ã‹ã£ãŸã‚‰æŠœã‘ã‚‹ 
+			pointer = mainpointer + i + 48 ;i ã®48æ–‡å­—å…ˆãŒãƒ‡ãƒ¼ã‚¿ã®å…ˆé ­ 
+			len = instr(cont,pointer,"<") ;ãƒ‡ãƒ¼ã‚¿ã¯"<"ã¾ã§ 
+			poi(id,mo) = double(strmid(cont,pointer,len)) ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿å–å¾— 
 
 			i = instr(cont,mainpointer,"class=\"rank") 
 			pointer = mainpointer + i + 40 
 			len = instr(cont,pointer,"<") 
-			rank(id,mo) = int(strmid(cont,pointer,len)) ;”’lˆÈŠO‚É‚Í‚O‚ª“ü‚é 
+			rank(id,mo) = int(strmid(cont,pointer,len)) ;æ•°å€¤ä»¥å¤–ã«ã¯ï¼ãŒå…¥ã‚‹ 
 
 			i = instr(cont,mainpointer,"request_no="); 
 			pointer = mainpointer + i + 11 
 			len = instr(cont,pointer,"\"") 
 			requestno = strmid(cont,pointer,len) 
-			n1(id)=strmid (requestno,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+			n1(id)=strmid (requestno,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 			n2(id)=strmid (requestno,5,2);
 
 
-			i = instr(cont,mainpointer,"<td rowspan=1 class=\"up\">");‹Èƒ^ƒCƒgƒ‹ 
+			i = instr(cont,mainpointer,"<td rowspan=1 class=\"up\">");æ›²ã‚¿ã‚¤ãƒˆãƒ« 
 			pointer = mainpointer + i + 25 
 			len = instr(cont,pointer,"<") 
 			son(id) = strmid(cont,pointer,len) 
 
 ;			if (ki==1)||(ki==3) {
-				i = instr(cont,mainpointer,"1ˆÊy") 
+				i = instr(cont,mainpointer,"1ä½ã€") 
 				pointer = mainpointer + i + 5 
-				len = instr(cont,pointer,"“_z") 
-				top3(id,mo,0) = strmid(cont,pointer,6);1ˆÊ‚Ì“¾“_ 
-				top3(id,mo,1)=strmid(cont,pointer+14,16);1ˆÊ‚Ìƒ‰ƒ“ƒoƒgƒl[ƒ€
-				i = instr(cont,mainpointer,"2ˆÊy") 
+				len = instr(cont,pointer,"ç‚¹ã€‘") 
+				top3(id,mo,0) = strmid(cont,pointer,6);1ä½ã®å¾—ç‚¹ 
+				top3(id,mo,1)=strmid(cont,pointer+14,16);1ä½ã®ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ 
+				i = instr(cont,mainpointer,"2ä½ã€") 
 				pointer = mainpointer + i + 5 
-				len = instr(cont,pointer,"“_z") 
-				top3(id,mo,2) = strmid(cont,pointer,6);2ˆÊ‚Ì“¾“_ 
-				top3(id,mo,3)=strmid(cont,pointer+10,16);2ˆÊ‚Ìƒ‰ƒ“ƒoƒgƒl[ƒ€
+				len = instr(cont,pointer,"ç‚¹ã€‘") 
+				top3(id,mo,2) = strmid(cont,pointer,6);2ä½ã®å¾—ç‚¹ 
+				top3(id,mo,3)=strmid(cont,pointer+10,16);2ä½ã®ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ 
 ;			}
 
 			i = instr(cont,mainpointer,"class=\"down\">/") 
 			pointer = mainpointer + i 
-			i = instr(cont,pointer,"/")  ;"/"‚Ì3‚ÂŒã‚©‚ç"<"‚Ü‚Å‚ğæ“¾B
+			i = instr(cont,pointer,"/")  ;"/"ã®3ã¤å¾Œã‹ã‚‰"<"ã¾ã§ã‚’å–å¾—ã€‚
 			pointer = pointer + i + 3        ;
 			len = instr(cont,pointer,"<"); 
 			s = strmid(cont,pointer,len) 
@@ -706,11 +706,11 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			if (ar(id,mo)==0) {
 				i = instr(cont,mainpointer,"class=\"down\">/") 
 				pointer = mainpointer + i 
-				i = instr(cont,pointer,"/")  ;"/"‚Ì2‚ÂŒã‚©‚ç"<"‚Ü‚Å‚ğæ“¾B
+				i = instr(cont,pointer,"/")  ;"/"ã®2ã¤å¾Œã‹ã‚‰"<"ã¾ã§ã‚’å–å¾—ã€‚
 				pointer = pointer + i + 2    ;
 				len = instr(cont,pointer,"<"); 
 				s = strmid(cont,pointer,len) 
-			if (s = "100+"){ ;100+•\‹L‘Î‰ 
+			if (s = "100+"){ ;100+è¡¨è¨˜å¯¾å¿œ 
 				ar(id,mo) = 100
 				if (poi(id,mo)>0)&(rank(id,mo)==0):rank(id,mo)=101:ar(id,mo)=101
 			}else{ 
@@ -722,39 +722,39 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			i = instr(cont,mainpointer,"<td rowspan=1 class=\"down\">") 
 			pointer = mainpointer + i + 27 
 			len = instr(cont,pointer,"<") 
-			art(id) = strmid(cont,pointer,len);ƒA[ƒeƒBƒXƒg–¼æ“¾
+			art(id) = strmid(cont,pointer,len);ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåå–å¾—
 
 ;			if (ki==1)||(ki==3) {
-				i = instr(cont,mainpointer,"3ˆÊy") 
+				i = instr(cont,mainpointer,"3ä½ã€") 
 				pointer = mainpointer + i + 5 
-				len = instr(cont,pointer,"“_z") 
-				top3(id,mo,4)=strmid(cont,pointer,6);3ˆÊ‚Ì“¾“_
-				top3(id,mo,5)=strmid(cont,pointer+10,16);3ˆÊ‚Ìƒ‰ƒ“ƒoƒgƒl[ƒ€
+				len = instr(cont,pointer,"ç‚¹ã€‘") 
+				top3(id,mo,4)=strmid(cont,pointer,6);3ä½ã®å¾—ç‚¹
+				top3(id,mo,5)=strmid(cont,pointer+10,16);3ä½ã®ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ 
 ;			}
 		
 		}else{
-			;v1.0ˆÈ~‚ÌHTML
+			;v1.0ä»¥é™ã®HTML
 			
-			i = instr(cont,mainpointer,"class=\"MS") ;“¾“_ƒf[ƒ^‚Ì‘O‚É•K‚¸‚ ‚é•¶š—ñ‚ğŒŸõ 
-			if i = -1 : break ;–³‚©‚Á‚½‚ç”²‚¯‚é 
-			pointer = mainpointer + i + 12 ;i ‚Ì12•¶šæ‚ªƒf[ƒ^‚Ìæ“ª 
-			len = instr(cont,pointer,"<") ;ƒf[ƒ^‚Í"<"‚Ü‚Å 
-			poi(id,mo) = double(strmid(cont,pointer,len)) ;“¾“_ƒf[ƒ^æ“¾ 
+			i = instr(cont,mainpointer,"class=\"MS") ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿ã®å‰ã«å¿…ãšã‚ã‚‹æ–‡å­—åˆ—ã‚’æ¤œç´¢ 
+			if i = -1 : break ;ç„¡ã‹ã£ãŸã‚‰æŠœã‘ã‚‹ 
+			pointer = mainpointer + i + 12 ;i ã®12æ–‡å­—å…ˆãŒãƒ‡ãƒ¼ã‚¿ã®å…ˆé ­ 
+			len = instr(cont,pointer,"<") ;ãƒ‡ãƒ¼ã‚¿ã¯"<"ã¾ã§ 
+			poi(id,mo) = double(strmid(cont,pointer,len)) ;å¾—ç‚¹ãƒ‡ãƒ¼ã‚¿å–å¾— 
 
 			i = instr(cont,mainpointer,"class=\"MR") 
 			pointer = mainpointer + i + 12 
 			len = instr(cont,pointer,"<") 
-			rank(id,mo) = int(strmid(cont,pointer,len)) ;”’lˆÈŠO‚É‚Í‚O‚ª“ü‚é 
+			rank(id,mo) = int(strmid(cont,pointer,len)) ;æ•°å€¤ä»¥å¤–ã«ã¯ï¼ãŒå…¥ã‚‹ 
 
 			i = instr(cont,mainpointer,"request_no="); 
 			pointer = mainpointer + i + 11 
 			len = instr(cont,pointer,"\"") 
 			requestno = strmid(cont,pointer,len) 
-			n1(id)=strmid (requestno,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+			n1(id)=strmid (requestno,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 			n2(id)=strmid (requestno,5,2);
 
 
-			i = instr(cont,mainpointer,"class=\"sng\"");‹Èƒ^ƒCƒgƒ‹ 
+			i = instr(cont,mainpointer,"class=\"sng\"");æ›²ã‚¿ã‚¤ãƒˆãƒ« 
 			pointer = mainpointer + i + 12 
 			len = instr(cont,pointer,"<") 
 			son(id) = strmid(cont,pointer,len) 
@@ -762,27 +762,27 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 ;			if (ki==1)||(ki==3) {
 				i = instr(cont,mainpointer,"class=\"TR1\"") 
 				pointer = mainpointer + i + 17 
-				len = instr(cont,pointer,"“_z") 
-				top3(id,mo,0) = strmid(cont,pointer,6);1ˆÊ‚Ì“¾“_
-				top3(id,mo,1)=strmid(cont,pointer+14,16);1ˆÊ‚Ìƒ‰ƒ“ƒoƒgƒl[ƒ€
+				len = instr(cont,pointer,"ç‚¹ã€‘") 
+				top3(id,mo,0) = strmid(cont,pointer,6);1ä½ã®å¾—ç‚¹
+				top3(id,mo,1)=strmid(cont,pointer+14,16);1ä½ã®ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ 
 				i = instr(cont,mainpointer,"class=\"TR2\"") 
 				pointer = mainpointer + i + 17 
-				top3(id,mo,2) = strmid(cont,pointer,6);2ˆÊ‚Ì“¾“_ 
-				top3(id,mo,3)=strmid(cont,pointer+14,16);2ˆÊ‚Ìƒ‰ƒ“ƒoƒgƒl[ƒ€
+				top3(id,mo,2) = strmid(cont,pointer,6);2ä½ã®å¾—ç‚¹ 
+				top3(id,mo,3)=strmid(cont,pointer+14,16);2ä½ã®ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ 
 				i = instr(cont,mainpointer,"class=\"TR3\"") 
 				pointer = mainpointer + i + 17 
-				top3(id,mo,4) = strmid(cont,pointer,6);3ˆÊ‚Ì“¾“_ 
-				top3(id,mo,5)=strmid(cont,pointer+14,16);3ˆÊ‚Ìƒ‰ƒ“ƒoƒgƒl[ƒ€
+				top3(id,mo,4) = strmid(cont,pointer,6);3ä½ã®å¾—ç‚¹ 
+				top3(id,mo,5)=strmid(cont,pointer+14,16);3ä½ã®ãƒ©ãƒ³ãƒãƒˆãƒãƒ¼ãƒ 
 ;			}
 
 
 			i = instr(cont,mainpointer,"class=\"RK") 
 			pointer = mainpointer + i 
-			i = instr(cont,pointer,"/")  ;"/"‚Ì1‚ÂŒã‚©‚ç"<"‚Ü‚Å‚ğæ“¾B
+			i = instr(cont,pointer,"/")  ;"/"ã®1ã¤å¾Œã‹ã‚‰"<"ã¾ã§ã‚’å–å¾—ã€‚
 			pointer = pointer + i + 1        ;
 			len = instr(cont,pointer,"<"); 
 			s = strmid(cont,pointer,len) 
-			if (s = "100+"){ ;100+•\‹L‘Î‰ 
+			if (s = "100+"){ ;100+è¡¨è¨˜å¯¾å¿œ 
 				ar(id,mo) = 100 
 				if (poi(id,mo)>0)&(rank(id,mo)==0):rank(id,mo)=101:ar(id,mo)=101
 			}else{ 
@@ -792,30 +792,30 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			i = instr(cont,mainpointer,"class=\"sgr\"") 
 			pointer = mainpointer + i + 12 
 			len = instr(cont,pointer,"<") 
-			art(id) = strmid(cont,pointer,len);ƒA[ƒeƒBƒXƒg–¼æ“¾
+			art(id) = strmid(cont,pointer,len);ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåå–å¾—
 
 		}	
-	;datƒtƒ@ƒCƒ‹“f‚«o‚µ
+	;datãƒ•ã‚¡ã‚¤ãƒ«åãå‡ºã—
 		add_string n1(id)+"-"+n2(id)+"\n"
 		add_string son(id)+"\n"
 		add_string art(id)+"\n"
-		add_string ""+fileinfo(8)+"/"+fileinfo(9)+"/"+fileinfo(11)+"@"+fileinfo(12)+":"+fileinfo(13)+"\n"
+		add_string ""+fileinfo(8)+"/"+fileinfo(9)+"/"+fileinfo(11)+"ã€€"+fileinfo(12)+":"+fileinfo(13)+"\n"
 		add_string ""+ar(id,mo)+"\n"
-		add_string "  1ˆÊ|"+top3(id,mo,0)+"“_|"+top3(id,mo,1)+"|        |    \n"
-		add_string "  2ˆÊ|"+top3(id,mo,2)+"“_|"+top3(id,mo,3)+"|        |    \n"
-		add_string "  3ˆÊ|"+top3(id,mo,4)+"“_|"+top3(id,mo,5)+"|        |    \n"
+		add_string "  1ä½|"+top3(id,mo,0)+"ç‚¹|"+top3(id,mo,1)+"|        |    \n"
+		add_string "  2ä½|"+top3(id,mo,2)+"ç‚¹|"+top3(id,mo,3)+"|        |    \n"
+		add_string "  3ä½|"+top3(id,mo,4)+"ç‚¹|"+top3(id,mo,5)+"|        |    \n"
 		for i,4,ar(id,mo)+1,1
 			if i<=9:temp="  "
 			if (i>=10)&(i<=99):temp=" "
 			if i>=100:temp=""
 			if i==rank(id,mo) {
-				temp=temp+strf(""+i+"ˆÊ|%2.3f“_|"+rn(ser),poi(id,mo))		
+				temp=temp+strf(""+i+"ä½|%2.3fç‚¹|"+rn(ser),poi(id,mo))		
 				for k,0,16-strlen(rn(ser)),1: temp=temp+" ": next
 				temp=temp+"|"+pre(ser)
 				for k,0,8-strlen(pre(ser)),1: temp=temp+" ": next
 				temp=temp+"|"+se(ser)
 			}else{
-				temp=temp+i+"ˆÊ|      “_|                |        |    "
+				temp=temp+i+"ä½|      ç‚¹|                |        |    "
 			}
 			add_string temp+"\n"
 		next
@@ -823,35 +823,35 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		await wait_time(sr(10))
 
 		mainpointer = pointer
-		if rank(id,mo)==0: no_detect(mo)=1;–¢ŒŸo‚¾‚Á‚½‚çƒtƒ‰ƒO‚ğ—§‚Ä‚é
+		if rank(id,mo)==0: no_detect(mo)=1;æœªæ¤œå‡ºã ã£ãŸã‚‰ãƒ•ãƒ©ã‚°ã‚’ç«‹ã¦ã‚‹
 		if id!=0:gosub *check
 		if fl=0:id=id+1
-		title "Œ»İˆ—’†:"+(mo+1)+"ƒtƒ@ƒCƒ‹–Ú:"+id+"‹ÈŒŸo"
+		title "ç¾åœ¨å‡¦ç†ä¸­:"+(mo+1)+"ãƒ•ã‚¡ã‚¤ãƒ«ç›®:"+id+"æ›²æ¤œå‡º"
 
 	loop
 	await wait_time(sr(10))
 	get_string output
-	if month(mo)<10:bsave "output"+year(mo)+"0"+month(mo)+".dat",output,-1 ;o—Í 
-	if month(mo)>=10:bsave "output"+year(mo)+month(mo)+".dat",output,-1 ;o—Í 
+	if month(mo)<10:bsave "output"+year(mo)+"0"+month(mo)+".dat",output,-1 ;å‡ºåŠ› 
+	if month(mo)>=10:bsave "output"+year(mo)+month(mo)+".dat",output,-1 ;å‡ºåŠ› 
 	return
 ;================================================================================
 *precheck
-;IDd•¡ƒ`ƒFƒbƒN
-	fl=0;ƒ`ƒFƒbƒNƒtƒ‰ƒO
+;IDé‡è¤‡ãƒã‚§ãƒƒã‚¯
+	fl=0;ãƒã‚§ãƒƒã‚¯ãƒ•ãƒ©ã‚°
 	for cha,0,id,1
-		if (n1(cha)==n1(id))&(n2(cha)==n2(id)) {;ƒŠƒNƒGƒXƒgNo.‚ªˆê’v‚µ‚½‚Æ‚«		
+		if (n1(cha)==n1(id))&(n2(cha)==n2(id)) {;ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ãŒä¸€è‡´ã—ãŸã¨ã		
 			fl=1:_break
 		}
 	next
 	return
 ;==precheck end=============================================================================
 *check
-;IDd•¡ƒ`ƒFƒbƒN
-	fl=0;ƒ`ƒFƒbƒNƒtƒ‰ƒO
+;IDé‡è¤‡ãƒã‚§ãƒƒã‚¯
+	fl=0;ãƒã‚§ãƒƒã‚¯ãƒ•ãƒ©ã‚°
 	if rank(id,mo)>ar(id,mo):poi(id,mo)=0.000:rank(id,mo)=0
 	for cha,0,id,1
-		if (n1(cha)==n1(id))&(n2(cha)==n2(id)) {;ƒŠƒNƒGƒXƒgNo.‚ªˆê’v‚µ‚½‚Æ‚«		
-			poi(cha,mo)=poi(id,mo)			;mo‚ÍŒÅ’è‚Å¬‚³‚¢•û‚Ì‹ÈID‚ÉŒˆá‚¢‚Ìƒf[ƒ^‚ğ‘ã“üB
+		if (n1(cha)==n1(id))&(n2(cha)==n2(id)) {;ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ãŒä¸€è‡´ã—ãŸã¨ã		
+			poi(cha,mo)=poi(id,mo)			;moã¯å›ºå®šã§å°ã•ã„æ–¹ã®æ›²IDã«æœˆé•ã„ã®ãƒ‡ãƒ¼ã‚¿ã‚’ä»£å…¥ã€‚
 			rank(cha,mo)=rank(id,mo)		
 			ar(cha,mo)=ar(id,mo)
 			if (ki==1)||(ki==3) {
@@ -862,13 +862,13 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 				top3(cha,mo,4)=top3(id,mo,4)
 				top3(cha,mo,5)=top3(id,mo,5)
 			}
-			poi(id,mo)=0.000:rank(id,mo)=0:ar(id,mo)=0;‘ã“üŒ³‚Ì”z—ñ“à—eƒNƒŠƒA
+			poi(id,mo)=0.000:rank(id,mo)=0:ar(id,mo)=0;ä»£å…¥å…ƒã®é…åˆ—å†…å®¹ã‚¯ãƒªã‚¢
 			fl=1:_break
 		}
 	next
 	return
 ;==========================================================================================
-;–¢ŒŸo‹Èè“ü—Í
+;æœªæ¤œå‡ºæ›²æ‰‹å…¥åŠ›
 *hand
 	for chb,0,m,1
 //		flg=0
@@ -879,31 +879,31 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		if (no_detect(chb)==1)&&(limit100(chb)==1) {
 			gsel 0,1
 			gsel 2,2
-			pos 10,25:mes ""+year(chb)+"”N"+month(chb)+"Œ‚Ìƒ‰ƒ“ƒNŠO‹È‚Ì“_”“ü—Í•û–@‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢B"
-			objprm 3,0;ƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚n‚e‚e
+			pos 10,25:mes ""+year(chb)+"å¹´"+month(chb)+"æœˆã®ãƒ©ãƒ³ã‚¯å¤–æ›²ã®ç‚¹æ•°å…¥åŠ›æ–¹æ³•ã‚’é¸æŠã—ã¦ãã ã•ã„ã€‚"
+			objprm 3,0;ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ï¼¯ï¼¦ï¼¦
 			if datatype==0:objgray 3,1;
-			if datatype==1:add2dat=0:objgray 3,0;HTMLƒtƒ@ƒCƒ‹‚Ìê‡’Ç‹LOFF
+			if datatype==1:add2dat=0:objgray 3,0;HTMLãƒ•ã‚¡ã‚¤ãƒ«ã®å ´åˆè¿½è¨˜OFF
 			stop
 		}
 *next_month
 		gsel 3,-1
 		gsel 2,0
-		color 200,200,255:boxf 0,0,320,120;ƒEƒCƒ“ƒhƒEid=2‚ÌƒtƒH[ƒ€Á‹
+		color 200,200,255:boxf 0,0,320,120;ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦id=2ã®ãƒ•ã‚©ãƒ¼ãƒ æ¶ˆå»
 		color 0,0,0
 	next
 	gsel 0,1
 	goto *sort
 	stop
 ;=========================================================================================
-*no_input	;“ü—Í‚µ‚È‚¢
+*no_input	;å…¥åŠ›ã—ãªã„
 	gsel 0,1
 	gsel 2,-1
 	goto *next_month
 
-*hand_input	;è“ü—Í
+*hand_input	;æ‰‹å…¥åŠ›
 	gsel 2,-1
 	gsel 3,1
-	//ƒf[ƒ^ƒtƒ@ƒCƒ‹’Ç‹L‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚éê‡Aƒf[ƒ^ƒtƒ@ƒCƒ‹‚ğƒ[ƒh
+	//ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¿½è¨˜ãŒé¸æŠã•ã‚Œã¦ã„ã‚‹å ´åˆã€ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ­ãƒ¼ãƒ‰
 	if add2dat==1 {
 		exist datafile(chb)
 		alloc w_buf,abs(double(strsize)*1.01)
@@ -916,58 +916,58 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			objprm 0,poi(cha,chb)
 			pos 10,10:mes ""+n1(cha)+"-"+n2(cha)+""
 			pos 10,30:mes ""+son(cha)+"-"+art(cha)+""
-			pos 10,50:mes ""+year(chb)+"”N"+month(chb)+"Œ"
-			pos 50,70:mes "“_"
-			t_n1=n1(cha): t_n2=n2(cha)	//ƒf[ƒ^ƒtƒ@ƒCƒ‹’Ç‹L—p
+			pos 10,50:mes ""+year(chb)+"å¹´"+month(chb)+"æœˆ"
+			pos 50,70:mes "ç‚¹"
+			t_n1=n1(cha): t_n2=n2(cha)	//ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¿½è¨˜ç”¨
 			stop
 *syori
 			gsel 3,1
-			color 200,200,255:boxf 0,0,320,150;ƒEƒCƒ“ƒhƒEid=3‚ÌƒtƒH[ƒ€Á‹
+			color 200,200,255:boxf 0,0,320,150;ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦id=3ã®ãƒ•ã‚©ãƒ¼ãƒ æ¶ˆå»
 			color 0,0,0
 		}
 	next
-	if add2dat==1: notesave datafile(chb)	//ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ğã‘‚«
+	if add2dat==1: notesave datafile(chb)	//ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¸Šæ›¸ã
 	goto *next_month
 
-*file_input	;ƒtƒ@ƒCƒ‹“ü—Í
+*file_input	;ãƒ•ã‚¡ã‚¤ãƒ«å…¥åŠ›
 	dialog "*",16
 	if stat=0:stop
 	gsel 2,-1
 	gsel 0,1
-	//ƒf[ƒ^ƒtƒ@ƒCƒ‹’Ç‹L‚ª‘I‘ğ‚³‚ê‚Ä‚¢‚éê‡Aƒf[ƒ^ƒtƒ@ƒCƒ‹‚ğƒ[ƒh
+	//ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¿½è¨˜ãŒé¸æŠã•ã‚Œã¦ã„ã‚‹å ´åˆã€ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒ­ãƒ¼ãƒ‰
 	if add2dat==1 {
 		exist datafile(chb)
 		alloc w_buf,abs(double(strsize)*1.01)
 		notesel w_buf
 		noteload datafile(chb)
 	}
-	;Œ•Ê“¾“_ƒtƒ@ƒCƒ‹‚Ì“Ç‚İo‚µ
+	;æœˆåˆ¥å¾—ç‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿å‡ºã—
 	exist refstr
 	alloc r_buf,strsize
 	notesel r_buf
 	noteload refstr
-	;s‚Ì‰ğÍ
+	;è¡Œã®è§£æ
 	for i,0,notemax,1
 		noteget con,i
-		t_n1=strmid (con,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+		t_n1=strmid (con,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 		t_n2=strmid (con,5,2);
-		t_poi=double(strmid(con,8,6));“_”‚Ìæ“¾
-		;ƒ‰ƒ“ƒNŠOƒtƒ@ƒCƒ‹“à‚É‚»‚ê‚æ‚è‚‚¢“_”‚Ì“¯‚¶‹È‚ª‚È‚¢‚©’²‚×‚é
+		t_poi=double(strmid(con,8,6));ç‚¹æ•°ã®å–å¾—
+		;ãƒ©ãƒ³ã‚¯å¤–ãƒ•ã‚¡ã‚¤ãƒ«å†…ã«ãã‚Œã‚ˆã‚Šé«˜ã„ç‚¹æ•°ã®åŒã˜æ›²ãŒãªã„ã‹èª¿ã¹ã‚‹
 		for chc,0,notemax,1
 			noteget con,chc
-			t_n3=strmid (con,0,4);ƒŠƒNƒGƒXƒgNo.‚Ìæ“¾
+			t_n3=strmid (con,0,4);ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã®å–å¾—
 			t_n4=strmid (con,5,2);
 			if (t_n3==t_n1)&(t_n4==t_n2) {
 				if t_poi<double(strmid(con,8,6)):t_poi=double(strmid(con,8,6))
 			}
 		next
-		for cha,0,id,1	;ƒŠƒNƒGƒXƒgNo.‚©‚çcha‚É“–‚½‚é”’l‚ğ’T‚·
+		for cha,0,id,1	;ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã‹ã‚‰chaã«å½“ãŸã‚‹æ•°å€¤ã‚’æ¢ã™
 			if n1(cha)=t_n1 && n2(cha)=t_n2 {
 				if t_poi>poi(cha,chb) {
 //				if no_detect(cha,chb)==1 {
 					poi(cha,chb)=t_poi
 					rank(cha,chb)=101:ar(cha,chb)=101
-					;ƒf[ƒ^ƒtƒ@ƒCƒ‹’Ç‹Lˆ—
+					;ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¿½è¨˜å‡¦ç†
 					if add2dat==1 {
 						notesel w_buf
 						gosub *rankout_add
@@ -976,9 +976,9 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 				}
 			}
 		next
-		title "ƒ‰ƒ“ƒNŠOƒtƒ@ƒCƒ‹‰ğÍ’†:"+i+"/"+notemax
+		title "ãƒ©ãƒ³ã‚¯å¤–ãƒ•ã‚¡ã‚¤ãƒ«è§£æä¸­:"+i+"/"+notemax
 	next
-	//ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ğã‘‚«
+	//ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä¸Šæ›¸ã
 	if add2dat==1 {
 		notesel w_buf
 		notesave datafile(chb)
@@ -989,27 +989,27 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	rank(cha,chb)=0:ar(cha,chb)=0:poi(cha,chb)=0.000
 	goto *syori
 *rank_out
-	poi(cha,chb)=double(strmid(con,0,6));•¶š—ñ“Ç‚İ‚İ { À”‰»
-	if poi(cha,chb)==0:dialog "“¾“_‚ª“ü—Í‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ",1:stop
+	poi(cha,chb)=double(strmid(con,0,6));æ–‡å­—åˆ—èª­ã¿è¾¼ã¿ ï¼‹ å®Ÿæ•°åŒ–
+	if poi(cha,chb)==0:dialog "å¾—ç‚¹ãŒå…¥åŠ›ã•ã‚Œã¦ã„ã¾ã›ã‚“",1:stop
 	rank(cha,chb)=101:ar(cha,chb)=101
-	if add2dat==1: gosub *rankout_add	//ƒf[ƒ^ƒtƒ@ƒCƒ‹’Ç‹Lˆ—
+	if add2dat==1: gosub *rankout_add	//ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¿½è¨˜å‡¦ç†
 	goto *syori
 *rankout_add
-	x=2;sƒJ[ƒ\ƒ‹
+	x=2;è¡Œã‚«ãƒ¼ã‚½ãƒ«
 	do
 		noteget con,x+1
-		if con==t_n1+"-"+t_n2 {	//ƒŠƒNƒGƒXƒgNo.‚ªˆê’v
-			noteadd "101",x+5,1	//‘S‰Ì¥Ò”‚ğã‘‚«
-			temp=strf("101ˆÊ|%2.3f“_|"+rn(ser),poi(cha,chb))
+		if con==t_n1+"-"+t_n2 {	//ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ãŒä¸€è‡´
+			noteadd "101",x+5,1	//å…¨æ­Œå”±è€…æ•°ã‚’ä¸Šæ›¸ã
+			temp=strf("101ä½|%2.3fç‚¹|"+rn(ser),poi(cha,chb))
 			for k,0,16-strlen(rn(ser)),1: temp=temp+" ": next
 			temp=temp+"|"+pre(ser)
 			for k,0,8-strlen(pre(ser)),1: temp=temp+" ": next
 			temp=temp+"|"+se(ser)
-			noteadd temp,x+5+rank(cha,chb),0	//ƒ‰ƒ“ƒNƒf[ƒ^‚ğ’Ç‹L
+			noteadd temp,x+5+rank(cha,chb),0	//ãƒ©ãƒ³ã‚¯ãƒ‡ãƒ¼ã‚¿ã‚’è¿½è¨˜
 			_break
 		}else {
-			noteget con,x+5		//‘S‰Ì¥Ò”‚ğæ“¾
-			x=(x+5)+con+1		//ƒŠƒNƒGƒXƒgNo.‚ª•sˆê’v
+			noteget con,x+5		//å…¨æ­Œå”±è€…æ•°ã‚’å–å¾—
+			x=(x+5)+con+1		//ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ãŒä¸ä¸€è‡´
 		}
 	until x>=notemax-1
 	return
@@ -1018,29 +1018,29 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	gsel 2,-1
 	gsel 3,-1
 	gsel 0,1
-	;‹È•ÊÅ‚“_E•½‹Ï“_Zo
+	;æ›²åˆ¥æœ€é«˜ç‚¹ãƒ»å¹³å‡ç‚¹ç®—å‡º
 	ddim max_point,id+10
 	ddim min_point,id+10
 	ddim avg,id+10
 	dim mon,id+10
 	for cha,0,id,1
 		for chb,0,m,1
-			if max_point(cha)<poi(cha,chb):max_point(cha)=poi(cha,chb);‹È‚²‚Æ‚ÌÅ‚“_‚ğmax_point()‚É‘ã“ü
+			if max_point(cha)<poi(cha,chb):max_point(cha)=poi(cha,chb);æ›²ã”ã¨ã®æœ€é«˜ç‚¹ã‚’max_point()ã«ä»£å…¥
 			avg(cha)=avg(cha)+poi(cha,chb)
 			if poi(cha,chb)>1:mon(cha)=mon(cha)+1
 		next
 	
-		if mon(cha)!=0:avg(cha)=avg(cha)/mon(cha);•½‹Ï
+		if mon(cha)!=0:avg(cha)=avg(cha)/mon(cha);å¹³å‡
 		if mon(cha)==0:avg(cha)=0.000
 	next
-	;Å’á“_Zo
+	;æœ€ä½ç‚¹ç®—å‡º
 	for cha,0,id,1
 		for chb,0,m,1
-			if min_point(cha)>poi(cha,chb):min_point(cha)=poi(cha,chb);‹È‚²‚Æ‚ÌÅ’á“_‚ğmin_point()‚É‘ã“ü
+			if min_point(cha)>poi(cha,chb):min_point(cha)=poi(cha,chb);æ›²ã”ã¨ã®æœ€ä½ç‚¹ã‚’min_point()ã«ä»£å…¥
 		next
 	next
 
-	;©ŒÈÅ‚“_E•½‹Ï“_‚Ì•½‹Ï
+	;è‡ªå·±æœ€é«˜ç‚¹ãƒ»å¹³å‡ç‚¹ã®å¹³å‡
 	dim mon,m+2
 	dim mont,1
 	ddim mp_avg,1
@@ -1050,8 +1050,8 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		mp_avg=mp_avg+max_point(cha)
 		if max_point(cha)>1:mon(0)=mon(0)+1
 	next
-	if mon(0)!=0:mp_avg=mp_avg/mon(0);mon(0);0“_‚Å‚È‚¢‹È‚Ì”
-	if mon(0)==0:mp_avg=0.000;mp_avg;©ŒÈÅ‚“_‚Ì•½‹Ï
+	if mon(0)!=0:mp_avg=mp_avg/mon(0);mon(0);0ç‚¹ã§ãªã„æ›²ã®æ•°
+	if mon(0)==0:mp_avg=0.000;mp_avg;è‡ªå·±æœ€é«˜ç‚¹ã®å¹³å‡
 	for chb,0,m,1
 		for cha,0,id,1
 			mon_avg(chb)=mon_avg(chb)+poi(cha,chb)
@@ -1059,14 +1059,14 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		next
 		mon(1)=mon(1)+mon(chb+2)
 		av_avg=av_avg+mon_avg(chb)
-		if mon(chb+2)!=0:mon_avg(chb)=mon_avg(chb)/mon(chb+2);Œ•Ê•½‹Ï
-		if mon(chb+2)==0:mon_avg(chb)=0.000;Œ•Ê•½‹Ï
+		if mon(chb+2)!=0:mon_avg(chb)=mon_avg(chb)/mon(chb+2);æœˆåˆ¥å¹³å‡
+		if mon(chb+2)==0:mon_avg(chb)=0.000;æœˆåˆ¥å¹³å‡
 	next
-	if mon(1)!=0:av_avg=av_avg/mon(1);mon(1)c0“_‚Å‚È‚¢‘S‰Ì¥‰ñ”
-	if mon(1)==0:av_avg=0.000;‘S•½‹Ï“_
-	;ƒCƒ“ƒfƒbƒNƒXƒ\[ƒg‚Ì€”õ
-	dim n,id;n(cha)=Œ³‚ÌƒCƒ“ƒfƒbƒNƒX
-	for cha,0,id,1;ƒCƒ“ƒfƒbƒNƒX‚Ì‰Šú‰»
+	if mon(1)!=0:av_avg=av_avg/mon(1);mon(1)â€¦0ç‚¹ã§ãªã„å…¨æ­Œå”±å›æ•°
+	if mon(1)==0:av_avg=0.000;å…¨å¹³å‡ç‚¹
+	;ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚½ãƒ¼ãƒˆã®æº–å‚™
+	dim n,id;n(cha)=å…ƒã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+	for cha,0,id,1;ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã®åˆæœŸåŒ–
 		n(cha)=cha
 	next
 	if sor==0:goto *mp_sort
@@ -1075,9 +1075,9 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	if sor==3 && sr(7)==0:goto *avg_sort
 	stop
 *mp_sort
-;Å‚“_‚Åƒ\[ƒg
+;æœ€é«˜ç‚¹ã§ã‚½ãƒ¼ãƒˆ
 	for cha,0,id,1
-		title "“¾“_‡‚Åƒ\[ƒg’†:"+(cha+1)+"/"+id+""
+		title "å¾—ç‚¹é †ã§ã‚½ãƒ¼ãƒˆä¸­:"+(cha+1)+"/"+id+""
 		max = cha
 		for chb,cha+1,id,1
 			if max_point(n(max))<max_point(n(chb)) {
@@ -1096,13 +1096,13 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 *no_sort
 	dim dum1
 	dim dum2
-;ƒŠƒNƒGƒXƒgNo.‚Åƒ\[ƒg
+;ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã§ã‚½ãƒ¼ãƒˆ
 	for cha,0,id,1
-		dum1(cha)=int(n1(cha));ƒ_ƒ~[‚É®”‚Æ‚µ‚ÄƒRƒs[
+		dum1(cha)=int(n1(cha));ãƒ€ãƒŸãƒ¼ã«æ•´æ•°ã¨ã—ã¦ã‚³ãƒ”ãƒ¼
 		dum2(cha)=int(n2(cha))
 	next
 	for cha,0,id,1
-		title "ƒŠƒNƒGƒXƒgNo.‚Åƒ\[ƒg’†:"+(cha+1)+"/"+id+""
+		title "ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã§ã‚½ãƒ¼ãƒˆä¸­:"+(cha+1)+"/"+id+""
 		for chb,0,id,1
 			if dum1(n(cha))<dum1(n(chb)) {
 				t=n(cha)
@@ -1124,7 +1124,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 *art_sort
 	sdim dum1,100,id
 	n3=0
-;ƒA[ƒeƒBƒXƒg–¼‚Åƒ\[ƒg
+;ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆåã§ã‚½ãƒ¼ãƒˆ
 	alloc buff,50000
 	notesel buff
 	for cha,0,id,1
@@ -1136,15 +1136,15 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		sortget n3,chb
 		n(chb-1)=n3
 	next
-;“¯‚¶ƒA[ƒeƒBƒXƒg‚ğƒŠƒNƒGƒXƒgNo.‚Åƒ\[ƒg
+;åŒã˜ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆã‚’ãƒªã‚¯ã‚¨ã‚¹ãƒˆNo.ã§ã‚½ãƒ¼ãƒˆ
 	dim dum1
 	dim dum2
 	for cha,0,id,1
-		dum1(cha)=int(n1(cha));ƒ_ƒ~[‚É®”‚Æ‚µ‚ÄƒRƒs[
+		dum1(cha)=int(n1(cha));ãƒ€ãƒŸãƒ¼ã«æ•´æ•°ã¨ã—ã¦ã‚³ãƒ”ãƒ¼
 		dum2(cha)=int(n2(cha))
 	next
 	for cha,0,id,1
-		title "ƒA[ƒeƒBƒXƒg‡‚Åƒ\[ƒg’†:"+(cha+1)+"/"+id+""
+		title "ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆé †ã§ã‚½ãƒ¼ãƒˆä¸­:"+(cha+1)+"/"+id+""
 		for chb,0,id,1
 			if art(n(cha))==art(n(chb)) {
 				if dum1(n(cha))<dum1(n(chb)) {
@@ -1166,9 +1166,9 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	stop
 
 *avg_sort
-;•½‹Ï“_‚Åƒ\[ƒg
+;å¹³å‡ç‚¹ã§ã‚½ãƒ¼ãƒˆ
 	for cha,0,id,1
-		title "•½‹Ï“_‡‚Åƒ\[ƒg’†:"+(cha+1)+"/"+id+""
+		title "å¹³å‡ç‚¹é †ã§ã‚½ãƒ¼ãƒˆä¸­:"+(cha+1)+"/"+id+""
 		for chb,0,id,1
 			if avg(n(cha))>avg(n(chb)) {
 				t=n(cha)
@@ -1194,22 +1194,22 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	noteadd "content=\"text/html; charset=x-sjis\">"
 	noteadd "<meta http-equiv=\"Content-Style-Type\" content=\"text/css\">"
 	noteadd "<link href=\"list.css\" rel=\"stylesheet\" type=\"text/css\">"
-	noteadd 	"<title>"+year(0)+"”N"+month(0)+"Œ‚©‚ç‚Ìƒ‰ƒ“ƒoƒg‘S¬Ñ("+rn(ser)+")</title></head>"
+	noteadd 	"<title>"+year(0)+"å¹´"+month(0)+"æœˆã‹ã‚‰ã®ãƒ©ãƒ³ãƒãƒˆå…¨æˆç¸¾("+rn(ser)+")</title></head>"
 	noteadd "<body>"
 	noteadd "<hr>"
 	noteadd filename(3)
 	if gettime(5)<10 {
-		noteadd "<br><br>XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+0+gettime(5)+""
+		noteadd "<br><br>æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+0+gettime(5)+""
 		}
 		else {
-		noteadd "<br><br>XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+gettime(5)+""
+		noteadd "<br><br>æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+gettime(5)+""
 	}
 	if sr(7)==0:noteadd "<table width=\""+(1000-sr(8)*100+120)+"\">"
-	if sr(7)==1:noteadd "<table width=\""+(1000-sr(8)*100)+"\">";•½‹Ï“_”ñ•\¦
+	if sr(7)==1:noteadd "<table width=\""+(1000-sr(8)*100)+"\">";å¹³å‡ç‚¹éè¡¨ç¤º
 	noteadd "<tr>"
-	noteadd "<th class=\"left\">©ŒÈÅ‚“_</th>"
-	if sr(7)==0:noteadd "<th width=\"120\">•½‹Ï“_</th>"
-	noteadd "<th colspan=2 class=\"side\">‹È–¼/ƒA[ƒeƒBƒXƒg</th>"
+	noteadd "<th class=\"left\">è‡ªå·±æœ€é«˜ç‚¹</th>"
+	if sr(7)==0:noteadd "<th width=\"120\">å¹³å‡ç‚¹</th>"
+	noteadd "<th colspan=2 class=\"side\">æ›²å/ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆ</th>"
 
 	sdim st,100,20
 	for chb,0,m,1
@@ -1217,20 +1217,20 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		noteadd "<th "+st(2)+">'"+strmid(date(chb),2,2)+"/"+strmid(date(chb),-1,2)+"</th>"
 	next
 	noteadd "</tr>"
-	for cha,0,id,1;Še‹Èo—Íƒ‹[ƒvŠJn
-		title "HTMLo—Í’†:"+(cha+1)+"/"+id+""
+	for cha,0,id,1;å„æ›²å‡ºåŠ›ãƒ«ãƒ¼ãƒ—é–‹å§‹
+		title "HTMLå‡ºåŠ›ä¸­:"+(cha+1)+"/"+id+""
 		if (sr(9)==1)&(max_point(n(cha))==0.000) {
 		}
 		else {
 			noteadd "<tr>"
-			st(3)="5";‰Šú’l
+			st(3)="5";åˆæœŸå€¤
 			for i,0,5,1
-				if max_point(n(cha))>=border(i):st(3)=str(i):_break;è‡’l”»’è
+				if max_point(n(cha))>=border(i):st(3)=str(i):_break;é–¾å€¤åˆ¤å®š
 			next
-			noteadd "<td rowspan=2 class=\"MS"+st(3)+"\">"+strf("%2.3f",max_point(n(cha)))+"<span class=\"ten\">“_</span></td>";Å‚“_
-			if sr(7)==0:noteadd "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",avg(n(cha)))+"<span class=\"ten\">“_</span></td>";•½‹Ï“_
+			noteadd "<td rowspan=2 class=\"MS"+st(3)+"\">"+strf("%2.3f",max_point(n(cha)))+"<span class=\"ten\">ç‚¹</span></td>";æœ€é«˜ç‚¹
+			if sr(7)==0:noteadd "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",avg(n(cha)))+"<span class=\"ten\">ç‚¹</span></td>";å¹³å‡ç‚¹
 			noteadd "<td class=\"no\"> No."+(cha+1)+"</td>"
-			noteadd "<td class=\"song\">"+son(n(cha))+"</td>";‹È–¼
+			noteadd "<td class=\"song\">"+son(n(cha))+"</td>";æ›²å
 			for chb,0,m,1
 				if chb==m-1:st(4)="L":else:st(4)=""
 				if (max_point(n(cha))==poi(n(cha),chb))&(poi(n(cha),chb)>0):st(5)="M":else:st(5)=""
@@ -1250,23 +1250,23 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			for chb,0,m,1			
 				if chb==m-1:st(4)="L":else:st(4)=""
 				if (rank(n(cha),chb) >= 1 & rank(n(cha),chb) <= 3) {
-					st(6)=str(rank(n(cha),chb));1-3ˆÊ
+					st(6)=str(rank(n(cha),chb));1-3ä½
 				} else : if rank(n(cha),chb)<11 {
-					st(6)="4";4-10ˆÊ
+					st(6)="4";4-10ä½
 				} else {
-					st(6)="5";11-100ˆÊorƒ‰ƒ“ƒNŠO
+					st(6)="5";11-100ä½orãƒ©ãƒ³ã‚¯å¤–
 				}
-			;	if rank(n(cha),chb)=1:st(6)="1";1ˆÊ
-			;	if rank(n(cha),chb)=2:st(6)="2";2ˆÊ
-			;	if rank(n(cha),chb)=3:st(6)="3";3ˆÊ
-			;	if (rank(n(cha),chb)>3)&(rank(n(cha),chb)<11):st(6)="4";4-10ˆÊ
-			;	if (rank(n(cha),chb)>10)|(rank(n(cha),chb)==0):st(6)="5";11-100ˆÊorƒ‰ƒ“ƒNŠO
+			;	if rank(n(cha),chb)=1:st(6)="1";1ä½
+			;	if rank(n(cha),chb)=2:st(6)="2";2ä½
+			;	if rank(n(cha),chb)=3:st(6)="3";3ä½
+			;	if (rank(n(cha),chb)>3)&(rank(n(cha),chb)<11):st(6)="4";4-10ä½
+			;	if (rank(n(cha),chb)>10)|(rank(n(cha),chb)==0):st(6)="5";11-100ä½orãƒ©ãƒ³ã‚¯å¤–
 				if ar(n(cha),chb)>=1 {
 					if (ar(n(cha),chb)>=100) && (limit100(chb)==1) {
-						;‹Œƒo[ƒWƒ‡ƒ“‚Ìƒf[ƒ^‚Ìê‡A100lˆÈã‚Í100
+						;æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ‡ãƒ¼ã‚¿ã®å ´åˆã€100äººä»¥ä¸Šã¯100
 						st(7)="100"
 					} else {
-						;Vƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚©A1-100l‚Ü‚Å‚Í‚»‚Ì‚Ü‚Ü‹L“ü
+						;æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã€1-100äººã¾ã§ã¯ãã®ã¾ã¾è¨˜å…¥
 						st(7)=str(ar(n(cha),chb))
 					}
 				}
@@ -1282,23 +1282,23 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			next
 			noteadd "</tr>"
 			noteadd "<tr></tr>"
-		};if sr(9)...else‚ÌğŒI—¹
+		};if sr(9)...elseã®æ¡ä»¶çµ‚äº†
 		await wait_time(sr(10))
-	next;Še‹Èo—Íƒ‹[ƒvI—¹
+	next;å„æ›²å‡ºåŠ›ãƒ«ãƒ¼ãƒ—çµ‚äº†
 	noteadd "</table><br>"
 	if sr(7)==0:noteadd "<table width=\"820\">"
 	if sr(7)==1:noteadd "<table width=\"700\">"
 	noteadd "<tr>"
-	noteadd "<th class=\"left\">•½‹Ï©ŒÈÅ‚“_</th>"
-	noteadd "<th class=\"left\">•½‹Ï“_</th>"
+	noteadd "<th class=\"left\">å¹³å‡è‡ªå·±æœ€é«˜ç‚¹</th>"
+	noteadd "<th class=\"left\">å¹³å‡ç‚¹</th>"
 	sdim st,100,20
 	for chb,0,m,1
 		if chb==m-1:st(2)="class=\"right\""
 		noteadd "<th "+st(2)+">'"+strmid(date(chb),2,2)+"/"+strmid(date(chb),-1,2)+"</th>"
 	next
 	noteadd "</tr><tr>"
-	noteadd "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",mp_avg)+"<span class=\"ten\">“_</span></td>";•½‹Ï“_
-	noteadd "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",av_avg)+"<span class=\"ten\">“_</span></td>";•½‹Ï“_
+	noteadd "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",mp_avg)+"<span class=\"ten\">ç‚¹</span></td>";å¹³å‡ç‚¹
+	noteadd "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",av_avg)+"<span class=\"ten\">ç‚¹</span></td>";å¹³å‡ç‚¹
 	for chb,0,m,1
 		if chb==m-1:st(4)="L":else:st(4)=""
 		noteadd "<td class=\"S"+st(4)+"\">"+strf("%2.3f",mon_avg(chb))+"</td>"
@@ -1306,18 +1306,18 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	noteadd "</tr><tr>"
 	for chb,0,m,1
 		if chb==m-1:st(4)="L":else:st(4)=""
-		noteadd "<td class=\"R"+st(4)+5+"\">"+mon(chb+2)+"‹È</td>"
+		noteadd "<td class=\"R"+st(4)+5+"\">"+mon(chb+2)+"æ›²</td>"
 	next
 	noteadd "</tr>"
 	noteadd "</table><br>"
-	noteadd "ƒf[ƒ^æ“¾ by "+ranbatokun
-	noteadd "WŒv by "+ranbatohan
+	noteadd "ãƒ‡ãƒ¼ã‚¿å–å¾— by "+ranbatokun
+	noteadd "é›†è¨ˆ by "+ranbatohan
 	noteadd filename(4)
 	noteadd "<br><hr>"
 	noteadd"</body></html>"
  	notesave filename(1)
 #else
-;v0.934ˆÈ~‚‘¬‰»‚ÅnoteŒn–½—ß”p~
+;v0.934ä»¥é™é«˜é€ŸåŒ–ã§noteç³»å‘½ä»¤å»ƒæ­¢
 	set_string ""
 	add_string "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"\n"
 	add_string "\"http://www.w3.org/TR/html4/loose.dtd\">\n"
@@ -1334,22 +1334,22 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
     add_string "$('#tablefix').tablefix({width:"+(1000-sr(8)*100)+", height: 600, fixRows: 1, fixCols: 4});\n"
 	add_string "});\n"
 	add_string "</script>\n"
-	add_string 	"<title>"+year(0)+"”N"+month(0)+"Œ‚©‚ç‚Ìƒ‰ƒ“ƒoƒg‘S¬Ñ("+rn(ser)+")</title></head>\n"
+	add_string 	"<title>"+year(0)+"å¹´"+month(0)+"æœˆã‹ã‚‰ã®ãƒ©ãƒ³ãƒãƒˆå…¨æˆç¸¾("+rn(ser)+")</title></head>\n"
 	add_string "<body>\n"
 	add_string "<hr>\n"
 	add_string filename(3)+"\n"
 	if gettime(5)<10 {
-		add_string "<br><br>XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+0+gettime(5)+"\n"
+		add_string "<br><br>æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+0+gettime(5)+"\n"
 		}
 		else {
-		add_string "<br><br>XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+gettime(5)+"\n"
+		add_string "<br><br>æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+gettime(5)+"\n"
 	}
 	if sr(7)==0:add_string "<table width=\""+(1000-sr(8)*100+120)+"\" id=tablefix>\n"
-	if sr(7)==1:add_string "<table width=\""+(1000-sr(8)*100)+"\" id=tablefix>\n";•½‹Ï“_”ñ•\¦
+	if sr(7)==1:add_string "<table width=\""+(1000-sr(8)*100)+"\" id=tablefix>\n";å¹³å‡ç‚¹éè¡¨ç¤º
 	add_string "<tr>\n"
-	add_string "<th class=\"left\">©ŒÈÅ‚“_</th>\n"
-	if sr(7)==0:add_string "<th class=\"right\">•½‹Ï“_</th>\n"
-	add_string "<th colspan=2 class=\"side\">‹È–¼/ƒA[ƒeƒBƒXƒg</th>\n"
+	add_string "<th class=\"left\">è‡ªå·±æœ€é«˜ç‚¹</th>\n"
+	if sr(7)==0:add_string "<th class=\"right\">å¹³å‡ç‚¹</th>\n"
+	add_string "<th colspan=2 class=\"side\">æ›²å/ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆ</th>\n"
 
 	sdim st,100,20
 	for chb,0,m,1
@@ -1357,20 +1357,20 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		add_string "<th"+st(2)+">'"+strmid(date(chb),2,2)+"/"+strmid(date(chb),-1,2)+"</th>\n"
 	next
 	add_string "</tr>\n"
-	for cha,0,id,1;Še‹Èo—Íƒ‹[ƒvŠJn
-		title "HTMLo—Í’†:"+(cha+1)+"/"+id+""
+	for cha,0,id,1;å„æ›²å‡ºåŠ›ãƒ«ãƒ¼ãƒ—é–‹å§‹
+		title "HTMLå‡ºåŠ›ä¸­:"+(cha+1)+"/"+id+""
 		if (sr(9)==1)&(max_point(n(cha))==0.000) {
 		}
 		else {
 			add_string "<tr>\n"
-			st(3)="5";‰Šú’l
+			st(3)="5";åˆæœŸå€¤
 			for i,0,5,1
-				if max_point(n(cha))>=border(i):st(3)=str(i):_break;è‡’l”»’è
+				if max_point(n(cha))>=border(i):st(3)=str(i):_break;é–¾å€¤åˆ¤å®š
 			next
-			add_string "<td rowspan=2 class=\"MS"+st(3)+"\">"+strf("%2.3f",max_point(n(cha)))+"<span class=\"ten\">“_</span></td>\n";Å‚“_
-			if sr(7)==0:add_string "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",avg(n(cha)))+"<span class=\"ten\">“_</span></td>\n";•½‹Ï“_
+			add_string "<td rowspan=2 class=\"MS"+st(3)+"\">"+strf("%2.3f",max_point(n(cha)))+"<span class=\"ten\">ç‚¹</span></td>\n";æœ€é«˜ç‚¹
+			if sr(7)==0:add_string "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",avg(n(cha)))+"<span class=\"ten\">ç‚¹</span></td>\n";å¹³å‡ç‚¹
 			add_string "<td class=\"no\"> No."+(cha+1)+"</td>\n"
-			add_string "<td class=\"song\">"+son(n(cha))+"</td>\n";‹È–¼
+			add_string "<td class=\"song\">"+son(n(cha))+"</td>\n";æ›²å
 			for chb,0,m,1
 				if chb==m-1:st(4)="L":else:st(4)=""
 				if (max_point(n(cha))==poi(n(cha),chb))&(poi(n(cha),chb)>0):st(5)="M":else:st(5)=""
@@ -1390,18 +1390,18 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			for chb,0,m,1			
 				if chb==m-1:st(4)="L":else:st(4)=""
 				if (rank(n(cha),chb) >= 1 & rank(n(cha),chb) <= 3) {
-					st(6)=str(rank(n(cha),chb));1-3ˆÊ
+					st(6)=str(rank(n(cha),chb));1-3ä½
 				} else : if (rank(n(cha),chb)==0)|(rank(n(cha),chb)>=11) {
-					st(6)="5";11-100ˆÊorƒ‰ƒ“ƒNŠO
+					st(6)="5";11-100ä½orãƒ©ãƒ³ã‚¯å¤–
 				} else : if rank(n(cha),chb)<11 {
-					st(6)="4";4-10ˆÊ
+					st(6)="4";4-10ä½
 				}
 				if ar(n(cha),chb)>=1 {
 					if (ar(n(cha),chb)>=100) && (limit100(chb)==1) {
-						;‹Œƒo[ƒWƒ‡ƒ“‚Ìƒf[ƒ^‚Ìê‡A100lˆÈã‚Í100
+						;æ—§ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ‡ãƒ¼ã‚¿ã®å ´åˆã€100äººä»¥ä¸Šã¯100
 						st(7)="100"
 					} else {
-						;Vƒo[ƒWƒ‡ƒ“‚Ìƒtƒ@ƒCƒ‹‚©A1-100l‚Ü‚Å‚Í‚»‚Ì‚Ü‚Ü‹L“ü
+						;æ–°ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã€1-100äººã¾ã§ã¯ãã®ã¾ã¾è¨˜å…¥
 						st(7)=str(ar(n(cha),chb))
 					}
 				}
@@ -1417,23 +1417,23 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 			next
 			add_string "</tr>\n"
 			add_string "<tr></tr>\n"
-		};if sr(9)...else‚ÌğŒI—¹
+		};if sr(9)...elseã®æ¡ä»¶çµ‚äº†
 		await wait_time(sr(10))
-	next;Še‹Èo—Íƒ‹[ƒvI—¹
+	next;å„æ›²å‡ºåŠ›ãƒ«ãƒ¼ãƒ—çµ‚äº†
 	add_string "</table><br>\n"
 	if sr(7)==0:add_string "<table width=\"820\">\n"
 	if sr(7)==1:add_string "<table width=\"700\">\n"
 	add_string "<tr>\n"
-	add_string "<th class=\"left\">•½‹Ï©ŒÈÅ‚“_</th>\n"
-	add_string "<th class=\"left\">•½‹Ï“_</th>\n"
+	add_string "<th class=\"left\">å¹³å‡è‡ªå·±æœ€é«˜ç‚¹</th>\n"
+	add_string "<th class=\"left\">å¹³å‡ç‚¹</th>\n"
 	sdim st,100,20
 	for chb,0,m,1
 		if chb==m-1:st(2)="class=\"right\""
 		add_string "<th "+st(2)+">'"+strmid(date(chb),2,2)+"/"+strmid(date(chb),-1,2)+"</th>\n"
 	next
 	add_string "</tr><tr>\n"
-	add_string "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",mp_avg)+"<span class=\"ten\">“_</span></td>\n";•½‹Ï“_
-	add_string "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",av_avg)+"<span class=\"ten\">“_</span></td>\n";•½‹Ï“_
+	add_string "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",mp_avg)+"<span class=\"ten\">ç‚¹</span></td>\n";å¹³å‡ç‚¹
+	add_string "<td rowspan=2 class=\"MS5\">"+strf("%2.3f",av_avg)+"<span class=\"ten\">ç‚¹</span></td>\n";å¹³å‡ç‚¹
 	for chb,0,m,1
 		if chb==m-1:st(4)="L":else:st(4)=""
 		add_string "<td class=\"S"+st(4)+"\">"+strf("%2.3f",mon_avg(chb))+"</td>\n"
@@ -1441,12 +1441,12 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 	add_string "</tr><tr>\n"
 	for chb,0,m,1
 		if chb==m-1:st(4)="L":else:st(4)=""
-		add_string "<td class=\"R"+st(4)+5+"\">"+mon(chb+2)+"‹È</td>\n"
+		add_string "<td class=\"R"+st(4)+5+"\">"+mon(chb+2)+"æ›²</td>\n"
 	next
 	add_string "</tr>\n"
 	add_string "</table><br>\n"
-	add_string "ƒf[ƒ^æ“¾ by "+ranbatokun+"\n"
-	add_string "WŒv by "+ranbatohan+"\n"
+	add_string "ãƒ‡ãƒ¼ã‚¿å–å¾— by "+ranbatokun+"\n"
+	add_string "é›†è¨ˆ by "+ranbatohan+"\n"
 	add_string filename(4)+"\n"
 	add_string "<br><hr>\n"
 	add_string"</body></html>\n"
@@ -1454,7 +1454,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
  	bsave filename(1),buff,-1
 #endif
 	time(1)=gettime(0)*365*30*3600*24+gettime(1)*30*3600*24+gettime(3)*3600*24+gettime(4)*3600+gettime(5)*60+gettime(6)
- 	dialog "ƒtƒ@ƒCƒ‹‚ğ"+filename(1)+"‚É•Û‘¶‚µ‚Ü‚µ‚½B\nŒo‰ßŠÔ"+(time(1)-time(0))+"•b\nWŒv"+(time(3)-time(2))+"•b\nHTMLo—Í"+(time(1)-time(4))+"•b",0,"o—ÍI—¹"
+ 	dialog "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’"+filename(1)+"ã«ä¿å­˜ã—ã¾ã—ãŸã€‚\nçµŒéæ™‚é–“"+(time(1)-time(0))+"ç§’\né›†è¨ˆ"+(time(3)-time(2))+"ç§’\nHTMLå‡ºåŠ›"+(time(1)-time(4))+"ç§’",0,"å‡ºåŠ›çµ‚äº†"
  	title titl
  	if ki==3:goto *htmlsave_simple
 	if (strlen(filename(0))>3)&(max_id==5):gosub *init_save
@@ -1463,9 +1463,9 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 ;======================================================================================================
 *htmlsave_simple
 	for cha,0,m,1
-		dialog ""+year(cha)+"”N"+month(cha)+"Œ‚ÌŒ‹‰Ê‚ğo—Í‚µ‚Ü‚·‚©H",2,"’PŒo—Í"
+		dialog ""+year(cha)+"å¹´"+month(cha)+"æœˆã®çµæœã‚’å‡ºåŠ›ã—ã¾ã™ã‹ï¼Ÿ",2,"å˜æœˆå‡ºåŠ›"
 		if stat==6 {
-			dialog "html",17,"•Û‘¶æ‚Ì‘I‘ğ"
+			dialog "html",17,"ä¿å­˜å…ˆã®é¸æŠ"
 			if stat==1 { 
 				filename(2)=refstr
 				alloc buff,100
@@ -1573,14 +1573,14 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 				noteadd "	-->"
 				noteadd "	</style>"
 				noteadd "	<title>"
-				noteadd ""+strmid(date(cha),2,2)+"”N"+strmid(date(cha),-1,2)+"Œ‚Ìƒ‰ƒ“ƒoƒg¬Ñ("+rn(ser)+")</title></head>"
+				noteadd ""+strmid(date(cha),2,2)+"å¹´"+strmid(date(cha),-1,2)+"æœˆã®ãƒ©ãƒ³ãƒãƒˆæˆç¸¾("+rn(ser)+")</title></head>"
 				noteadd "<body><hr>"
 				noteadd filename(3)
 				if gettime(5)<10 {
-					noteadd "<br><br>ƒf[ƒ^XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+0+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">¡Œ‚ÌÅ‚“_</th><th>‡ˆÊ</th><th style=\"font-size:10px\;\">‹È”Ô/l”</th><th>Šy‹Èî•ñ</th><th colspan=2 style=\"border-right: 2px solid black\;\">ãˆÊƒ‰ƒ“ƒJ[</th></tr>"
+					noteadd "<br><br>ãƒ‡ãƒ¼ã‚¿æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+0+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">ä»Šæœˆã®æœ€é«˜ç‚¹</th><th>é †ä½</th><th style=\"font-size:10px\;\">æ›²ç•ª/äººæ•°</th><th>æ¥½æ›²æƒ…å ±</th><th colspan=2 style=\"border-right: 2px solid black\;\">ä¸Šä½ãƒ©ãƒ³ã‚«ãƒ¼</th></tr>"
 				}
 				else {
-					noteadd "<br><br>ƒf[ƒ^XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">¡Œ‚ÌÅ‚“_</th><th>‡ˆÊ</th><th style=\"font-size:10px\;\">‹È”Ô/l”</th><th>Šy‹Èî•ñ</th><th colspan=2 style=\"border-right: 2px solid black\;\">ãˆÊƒ‰ƒ“ƒJ[</th></tr>"
+					noteadd "<br><br>ãƒ‡ãƒ¼ã‚¿æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">ä»Šæœˆã®æœ€é«˜ç‚¹</th><th>é †ä½</th><th style=\"font-size:10px\;\">æ›²ç•ª/äººæ•°</th><th>æ¥½æ›²æƒ…å ±</th><th colspan=2 style=\"border-right: 2px solid black\;\">ä¸Šä½ãƒ©ãƒ³ã‚«ãƒ¼</th></tr>"
 				}
 				for chb,0,id,1
 					if (((poi(n(chb),cha)==0.000)&(sr(9)==1))|(strlen(top3(n(chb),cha,0))<3)) {
@@ -1588,7 +1588,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 					else {
 						st(0)="5"
 						for i,0,5,1
-							if poi(n(chb),cha)>=border(i):st(0)=str(i):_break;è‡’l”»’è
+							if poi(n(chb),cha)>=border(i):st(0)=str(i):_break;é–¾å€¤åˆ¤å®š
 						next
 						if st(0)=="0":st(1)="#FF0000"
 						if st(0)=="1":st(1)="#FF6060"
@@ -1603,27 +1603,27 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 						if rank(n(chb),cha)>10:st(2)="5"
 
 						temp=""
-						temp=temp+"<tr><td rowspan=2 class=\"score\" style=\"background-color:"+st(1)+"\;\">"+strf("%2.3f",poi(n(chb),cha))+"<span class=\"ten\">“_</span></td>"
+						temp=temp+"<tr><td rowspan=2 class=\"score\" style=\"background-color:"+st(1)+"\;\">"+strf("%2.3f",poi(n(chb),cha))+"<span class=\"ten\">ç‚¹</span></td>"
 						if ((limit100(cha)==0)||(rank(n(chb),cha)<=100))&&(rank(n(chb),cha)!=0):temp=temp+"<td rowspan=2 class=\"rank"+st(2)+"\" style=\"padding:3px 20px\;\">"+rank(n(chb),cha)+"</td><td rowspan=1 style=\"text-align: center\;\" class=\"up\">"
 						if ((limit100(cha)==1)&&(rank(n(chb),cha)>100))||(rank(n(chb),cha)==0):temp=temp+"<td rowspan=2 class=\"rank5\" style=\"padding:3px 20px\;\">--</td><td rowspan=1 style=\"text-align: center\;\" class=\"up\">"
 						if lin=0:temp=temp+DAM+n1(n(chb))+"-"+n2(n(chb))+"\" target=\"_blank\" title=\"\">"+n1(n(chb))+"-"+n2(n(chb))+"</a></td>"
 						if lin=1:temp=temp+DAMk+n1(n(chb))+"-"+n2(n(chb))+"\" target=\"_blank\" title=\"\">"+n1(n(chb))+"-"+n2(n(chb))+"</a></td>"
-						temp=temp+"<td rowspan=1 class=\"up\">"+son(n(chb))+"</td><td rowspan=2 class=\"up\" style=\"background-color:gold\;border-right: 2px solid black\;border-left: 2px solid black\;\">  1ˆÊy"+top3(n(chb),cha,0)+"“_z<br>"+top3(n(chb),cha,1)+"</td>"
-						if ar(n(chb),cha)>=2:temp=temp+"<td rowspan=1 class=\"up\" style=\"font-size: 10px;background-color:lightgrey\;border-right: 2px solid black\;\">  2ˆÊy"+top3(n(chb),cha,2)+"“_z"+top3(n(chb),cha,3)+"</td></tr>"
+						temp=temp+"<td rowspan=1 class=\"up\">"+son(n(chb))+"</td><td rowspan=2 class=\"up\" style=\"background-color:gold\;border-right: 2px solid black\;border-left: 2px solid black\;\">  1ä½ã€"+top3(n(chb),cha,0)+"ç‚¹ã€‘<br>"+top3(n(chb),cha,1)+"</td>"
+						if ar(n(chb),cha)>=2:temp=temp+"<td rowspan=1 class=\"up\" style=\"font-size: 10px;background-color:lightgrey\;border-right: 2px solid black\;\">  2ä½ã€"+top3(n(chb),cha,2)+"ç‚¹ã€‘"+top3(n(chb),cha,3)+"</td></tr>"
 						if ar(n(chb),cha)<2:temp=temp+"<td rowspan=1 class=\"up\" style=\"font-size: 10px;border-right: 2px solid black\;\"></td></tr>"
-						if ar(n(chb),cha)<100:temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;\" class=\"down\">/@"+ar(n(chb),cha)+"</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
+						if ar(n(chb),cha)<100:temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;\" class=\"down\">/ã€€"+ar(n(chb),cha)+"</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
 						if (limit100(cha)==0)&&(ar(n(chb),cha)>=100):temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;font-weight:bold\;color:red\;\" class=\"down\">/ "+ar(n(chb),cha)+"</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
 						if (limit100(cha)==1)&&(ar(n(chb),cha)>=100):temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;font-weight:bold\;color:red\;\" class=\"down\">/ 100+</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
-						if ar(n(chb),cha)>=3:temp=temp+"<td rowspan=1 class=\"down\" style=\"font-size: 10px\;background-color:sandybrown\;border-right: 2px solid black\;\">  3ˆÊy"+top3(n(chb),cha,4)+"“_z"+top3(n(chb),cha,5)+"</td></tr><tr></tr>"
+						if ar(n(chb),cha)>=3:temp=temp+"<td rowspan=1 class=\"down\" style=\"font-size: 10px\;background-color:sandybrown\;border-right: 2px solid black\;\">  3ä½ã€"+top3(n(chb),cha,4)+"ç‚¹ã€‘"+top3(n(chb),cha,5)+"</td></tr><tr></tr>"
 						if ar(n(chb),cha)<3:temp=temp+"<td rowspan=1 class=\"down\" style=\"font-size: 10px\;border-right: 2px solid black\;\"></td></tr><tr></tr>"
 						noteadd temp
 					}
 					await wait_time(sr(10))
-					title "HTMLo—Í’†:"+(chb+1)+"/"+id+""
+					title "HTMLå‡ºåŠ›ä¸­:"+(chb+1)+"/"+id+""
 				next
 				noteadd	"</table><br>"
-				noteadd "WŒv by "+ranbatokun
-				noteadd "•ÒW by "+ranbatohan
+				noteadd "é›†è¨ˆ by "+ranbatokun
+				noteadd "ç·¨é›† by "+ranbatohan
 				noteadd filename(4)
 				noteadd "<br><hr>"
 				noteadd "</body>"
@@ -1721,14 +1721,14 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 				add_string "	-->\n"
 				add_string "	</style>\n"
 				add_string "	<title>\n"
-				add_string ""+strmid(date(cha),2,2)+"”N"+strmid(date(cha),-1,2)+"Œ‚Ìƒ‰ƒ“ƒoƒg¬Ñ("+rn(ser)+")</title></head>\n"
+				add_string ""+strmid(date(cha),2,2)+"å¹´"+strmid(date(cha),-1,2)+"æœˆã®ãƒ©ãƒ³ãƒãƒˆæˆç¸¾("+rn(ser)+")</title></head>\n"
 				add_string "<body><hr>\n"
 				add_string filename(3)+"\n"
 				if gettime(5)<10 {
-					add_string "<br><br>ƒf[ƒ^XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+0+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">¡Œ‚ÌÅ‚“_</th><th>‡ˆÊ</th><th style=\"font-size:10px\;\">‹È”Ô/l”</th><th>Šy‹Èî•ñ</th><th colspan=2 style=\"border-right: 2px solid black\;\">ãˆÊƒ‰ƒ“ƒJ[</th></tr>\n"
+					add_string "<br><br>ãƒ‡ãƒ¼ã‚¿æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+0+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">ä»Šæœˆã®æœ€é«˜ç‚¹</th><th>é †ä½</th><th style=\"font-size:10px\;\">æ›²ç•ª/äººæ•°</th><th>æ¥½æ›²æƒ…å ±</th><th colspan=2 style=\"border-right: 2px solid black\;\">ä¸Šä½ãƒ©ãƒ³ã‚«ãƒ¼</th></tr>\n"
 				}
 				else {
-					add_string "<br><br>ƒf[ƒ^XV:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"@"+gettime(4)+":"+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">¡Œ‚ÌÅ‚“_</th><th>‡ˆÊ</th><th style=\"font-size:10px\;\">‹È”Ô/l”</th><th>Šy‹Èî•ñ</th><th colspan=2 style=\"border-right: 2px solid black\;\">ãˆÊƒ‰ƒ“ƒJ[</th></tr>\n"
+					add_string "<br><br>ãƒ‡ãƒ¼ã‚¿æ›´æ–°æ™‚åˆ»:"+gettime(0)+"/"+gettime(1)+"/"+gettime(3)+"ã€€"+gettime(4)+":"+gettime(5)+"<table width=\""+(1000-sr(8)*100)+"\"><tr><th style=\"border-left: 2px solid black\;\">ä»Šæœˆã®æœ€é«˜ç‚¹</th><th>é †ä½</th><th style=\"font-size:10px\;\">æ›²ç•ª/äººæ•°</th><th>æ¥½æ›²æƒ…å ±</th><th colspan=2 style=\"border-right: 2px solid black\;\">ä¸Šä½ãƒ©ãƒ³ã‚«ãƒ¼</th></tr>\n"
 				}
 				for chb,0,id,1
 					if (((poi(n(chb),cha)==0.000)&(sr(9)==1))|(strlen(top3(n(chb),cha,0))<3)|(ar(n(chb),cha)<1)) {
@@ -1736,7 +1736,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 					else {
 						st(0)="5"
 						for i,0,5,1
-							if poi(n(chb),cha)>=border(i):st(0)=str(i):_break;è‡’l”»’è
+							if poi(n(chb),cha)>=border(i):st(0)=str(i):_break;é–¾å€¤åˆ¤å®š
 						next
 
 						if st(0)=="0" {
@@ -1754,7 +1754,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 						}
 
 						if (rank(n(chb),cha)>=1 & rank(n(chb),cha)<=3) {
-							st(2)=str(rank(n(chb),cha));1-3ˆÊ
+							st(2)=str(rank(n(chb),cha));1-3ä½
 						} else :if (rank(n(chb),cha)>3 & rank(n(chb),cha)<11) {
 							st(2)="4"
 						} else :if rank(n(chb),cha)>10 {
@@ -1762,27 +1762,27 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 						}
 
 						temp=""
-						temp=temp+"<tr><td rowspan=2 class=\"score\" style=\"background-color:"+st(1)+"\;\">"+strf("%2.3f",poi(n(chb),cha))+"<span class=\"ten\">“_</span></td>"
+						temp=temp+"<tr><td rowspan=2 class=\"score\" style=\"background-color:"+st(1)+"\;\">"+strf("%2.3f",poi(n(chb),cha))+"<span class=\"ten\">ç‚¹</span></td>"
 						if ((limit100(cha)==0)||(rank(n(chb),cha)<=100))&&(rank(n(chb),cha)!=0):temp=temp+"<td rowspan=2 class=\"rank"+st(2)+"\" style=\"padding:3px 20px\;\">"+rank(n(chb),cha)+"</td><td rowspan=1 style=\"text-align: center\;\" class=\"up\">"
 						if ((limit100(cha)==1)&&(rank(n(chb),cha)>100))||(rank(n(chb),cha)==0):temp=temp+"<td rowspan=2 class=\"rank5\" style=\"padding:3px 20px\;\">--</td><td rowspan=1 style=\"text-align: center\;\" class=\"up\">"
 						if lin=0:temp=temp+DAM+n1(n(chb))+"-"+n2(n(chb))+"\" target=\"_blank\" title=\"\">"+n1(n(chb))+"-"+n2(n(chb))+"</a></td>"
 						if lin=1:temp=temp+DAMk+n1(n(chb))+"-"+n2(n(chb))+"\" target=\"_blank\" title=\"\">"+n1(n(chb))+"-"+n2(n(chb))+"</a></td>"
-						temp=temp+"<td rowspan=1 class=\"up\">"+son(n(chb))+"</td><td rowspan=2 class=\"up\" style=\"background-color:gold\;border-right: 2px solid black\;border-left: 2px solid black\;\">  1ˆÊy"+top3(n(chb),cha,0)+"“_z<br>"+top3(n(chb),cha,1)+"</td>"
-						if ar(n(chb),cha)>=2:temp=temp+"<td rowspan=1 class=\"up\" style=\"font-size: 10px;background-color:lightgrey\;border-right: 2px solid black\;\">  2ˆÊy"+top3(n(chb),cha,2)+"“_z"+top3(n(chb),cha,3)+"</td></tr>"
+						temp=temp+"<td rowspan=1 class=\"up\">"+son(n(chb))+"</td><td rowspan=2 class=\"up\" style=\"background-color:gold\;border-right: 2px solid black\;border-left: 2px solid black\;\">  1ä½ã€"+top3(n(chb),cha,0)+"ç‚¹ã€‘<br>"+top3(n(chb),cha,1)+"</td>"
+						if ar(n(chb),cha)>=2:temp=temp+"<td rowspan=1 class=\"up\" style=\"font-size: 10px;background-color:lightgrey\;border-right: 2px solid black\;\">  2ä½ã€"+top3(n(chb),cha,2)+"ç‚¹ã€‘"+top3(n(chb),cha,3)+"</td></tr>"
 						if ar(n(chb),cha)<2:temp=temp+"<td rowspan=1 class=\"up\" style=\"font-size: 10px;border-right: 2px solid black\;\"></td></tr>"
-						if ar(n(chb),cha)<100:temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;\" class=\"down\">/@"+ar(n(chb),cha)+"</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
+						if ar(n(chb),cha)<100:temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;\" class=\"down\">/ã€€"+ar(n(chb),cha)+"</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
 						if (limit100(cha)==0)&&(ar(n(chb),cha)>=100):temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;font-weight:bold\;color:red\;\" class=\"down\">/ "+ar(n(chb),cha)+"</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
 						if (limit100(cha)==1)&&(ar(n(chb),cha)>=100):temp=temp+"<tr><td rowspan=1 style=\"font-size: 14px\;font-weight:bold\;color:red\;\" class=\"down\">/ 100+</td><td rowspan=1 class=\"down\">"+art(n(chb))+"</td>"
-						if ar(n(chb),cha)>=3:temp=temp+"<td rowspan=1 class=\"down\" style=\"font-size: 10px\;background-color:sandybrown\;border-right: 2px solid black\;\">  3ˆÊy"+top3(n(chb),cha,4)+"“_z"+top3(n(chb),cha,5)+"</td></tr><tr></tr>"
+						if ar(n(chb),cha)>=3:temp=temp+"<td rowspan=1 class=\"down\" style=\"font-size: 10px\;background-color:sandybrown\;border-right: 2px solid black\;\">  3ä½ã€"+top3(n(chb),cha,4)+"ç‚¹ã€‘"+top3(n(chb),cha,5)+"</td></tr><tr></tr>"
 						if ar(n(chb),cha)<3:temp=temp+"<td rowspan=1 class=\"down\" style=\"font-size: 10px\;border-right: 2px solid black\;\"></td></tr><tr></tr>"
 						add_string temp+"\n"
 					}
 					await wait_time(sr(10))
-					title "HTMLo—Í’†:"+(chb+1)+"/"+id+""
+					title "HTMLå‡ºåŠ›ä¸­:"+(chb+1)+"/"+id+""
 				next
 				add_string	"</table><br>\n"
-				add_string "WŒv by "+ranbatokun+"\n"
-				add_string "•ÒW by "+ranbatohan+"\n"
+				add_string "é›†è¨ˆ by "+ranbatokun+"\n"
+				add_string "ç·¨é›† by "+ranbatohan+"\n"
 				add_string filename(4)+"\n"
 				add_string "<br><hr>\n"
 				add_string "</body>\n"
@@ -1791,7 +1791,7 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 				bsave filename(2),buff,-1
 #endif
 				time(1)=gettime(0)*365*30*3600*24+gettime(1)*30*3600*24+gettime(3)*3600*24+gettime(4)*3600+gettime(5)*60+gettime(6)
-			 	dialog "ƒtƒ@ƒCƒ‹‚ğ"+filename(2)+"‚É•Û‘¶‚µ‚Ü‚µ‚½B\nŒo‰ßŠÔ"+(time(1)-time(0))+"•b",0,"o—ÍI—¹"
+			 	dialog "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’"+filename(2)+"ã«ä¿å­˜ã—ã¾ã—ãŸã€‚\nçµŒéæ™‚é–“"+(time(1)-time(0))+"ç§’",0,"å‡ºåŠ›çµ‚äº†"
 
 			}
 		}
@@ -1808,12 +1808,12 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 		noteadd son(cha),,0
 		noteadd art(cha),,0
 		for chb,0,m,1
-			noteadd ""+int(year(chb))+"”N"+int(month(chb))+"Œ",,0
-			noteadd ""+strf("%2.3f“_",poi(cha,chb))+":"+rank(cha,chb)+"ˆÊ/"+ar(cha,chb)+"l’†",,0
+			noteadd ""+int(year(chb))+"å¹´"+int(month(chb))+"æœˆ",,0
+			noteadd ""+strf("%2.3fç‚¹",poi(cha,chb))+":"+rank(cha,chb)+"ä½/"+ar(cha,chb)+"äººä¸­",,0
 		next
 	next
 	notesave filename(1)
- 	dialog "ƒtƒ@ƒCƒ‹‚ğ"+filename(1)+"‚É•Û‘¶‚µ‚Ü‚µ‚½B",0,"o—ÍI—¹"
+ 	dialog "ãƒ•ã‚¡ã‚¤ãƒ«ã‚’"+filename(1)+"ã«ä¿å­˜ã—ã¾ã—ãŸã€‚",0,"å‡ºåŠ›çµ‚äº†"
 	if (strlen(filename(0))>3)&(max_id==5):gosub *init_save 
 	goto *stop_routine
  	stop
@@ -1821,44 +1821,44 @@ set_priority IDLE_PRIORITY_CLASS,THREAD_PRIORITY_BELOW_NORMAL
 *init_save
 	alloc buff,10000
 	notesel buff
-	noteadd "u‚ç‚ñ‚Î‚Æ‚Í‚ñvv0.9xİ’è",0,1
-;ŒŸõID(1-5)
+	noteadd "ã€Œã‚‰ã‚“ã°ã¨ã¯ã‚“ã€v0.9xè¨­å®š",0,1
+;æ¤œç´¢ID(1-5)
 	for i,1,6,1
 		noteadd rn(i-1),i,1
 	next
-;ŒŸõ“s“¹•{Œ§(6-10)
+;æ¤œç´¢éƒ½é“åºœçœŒ(6-10)
 	for i,6,11,1
 		noteadd pre(i-6),i,1
 	next
-;ŒŸõ«•Ê(11-15)
+;æ¤œç´¢æ€§åˆ¥(11-15)
 	for i,11,16,1
 		noteadd se(i-11),i,1
 	next
-;“¾“_”zFè‡’l(16-20)
+;å¾—ç‚¹é…è‰²é–¾å€¤(16-20)
 	for i,0,5,1
 		borderm(i)=strf("%2.3f",border(i))
 	next
 	for i,16,21,1
 		noteadd borderm(i-16),i,1
 	next
-;“ü—Íƒf[ƒ^ƒtƒ@ƒCƒ‹–¼
+;å…¥åŠ›ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«å
 	for i,0,m,1
 		if month(i)<10: noteadd ""+year(i)+"-"+"0"+month(i)+"",21+2*i,1
 		if month(i)>=10:noteadd ""+year(i)+"-"+month(i)+"",21+2*i,1
 		noteadd datafile(i),22+2*i
 	next
-	;İ’èƒtƒ@ƒCƒ‹ƒ`ƒFƒbƒN
+	;è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ãƒã‚§ãƒƒã‚¯
 	if notemax>=22:notesave filename(0)
-	if notemax<22:dialog "ƒf[ƒ^ƒtƒ@ƒCƒ‹‚ªˆê‚Â‚àw’è‚³‚ê‚Ä‚¢‚È‚¢‚Ì‚ÅƒI[ƒgƒZ[ƒu‚ğƒLƒƒƒ“ƒZƒ‹‚µ‚Ü‚·B"
+	if notemax<22:dialog "ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«ãŒä¸€ã¤ã‚‚æŒ‡å®šã•ã‚Œã¦ã„ãªã„ã®ã§ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–ã‚’ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã—ã¾ã™ã€‚"
 	return
 	stop
 ;==========================================================================================
 *stop_routine
 	title titl
 	for i,0,43,1
-		objgray i,1;ƒIƒuƒWƒFƒNƒg‚ğ—LŒø‰»
+		objgray i,1;ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æœ‰åŠ¹åŒ–
 	next
-	;ƒƒ‚ƒŠ‰ğ•ú
+	;ãƒ¡ãƒ¢ãƒªè§£æ”¾
 ;	if admin==0 {
 ;		
 ;	}
